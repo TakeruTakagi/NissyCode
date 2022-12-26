@@ -15,25 +15,16 @@
                     <view key="view" contentMode="scaleToFill" id="xWj-47-U04">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ぽん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB0-0g-oBJ">
-                                <rect key="frame" x="175" y="205" width="35" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="q7v-iP-mvI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Uo5-c1-FjR"/>
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="star.fill" catalog="system" id="Uo5-c1-FjR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97d-7K-1iw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937" y="749"/>
         </scene>
-        <!--Item-->
+        <!--カジュアル-->
         <scene sceneID="0g9-Nb-AE8">
             <objects>
                 <viewController id="qiN-hO-KOf" sceneMemberID="viewController">
@@ -43,13 +34,13 @@
                         <viewLayoutGuide key="safeArea" id="bi1-J7-EQL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="npd-dE-2xz"/>
+                    <tabBarItem key="tabBarItem" title="カジュアル" image="person.3" catalog="system" id="npd-dE-2xz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfv-g6-UEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2761" y="749"/>
         </scene>
-        <!--Item 2-->
+        <!--フォーマル・デート-->
         <scene sceneID="Lvz-98-oIa">
             <objects>
                 <viewController id="5gf-Oj-vxM" sceneMemberID="viewController">
@@ -59,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="der-FD-ycJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="uqL-bc-dgU"/>
+                    <tabBarItem key="tabBarItem" title="フォーマル・デート" image="heart" catalog="system" id="uqL-bc-dgU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzt-EC-sz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,6 +77,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
