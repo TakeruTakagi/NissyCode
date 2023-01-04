@@ -15,12 +15,19 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     var realm: Realm!
     
-    var formalFassoins: [ApparelDataModel] = []
+    var formalFassions: [ApparelDataModel] = []
     
     let apparel = ApparelDataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FormalTableView.register(UINib(nibName: "FormalTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
+        
+        let formal1 = ApparelDataModel(id: "1", apparelText: "パーカー", apparelImage: "2002", starButton: false, onePointText: "オーバーサイズ", link: "http~~")
+        
+        
+        let formalFassions = [formalFassions]
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,7 +40,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return formalFassoins.count
+        return formalFassions.count
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -46,12 +53,13 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FormalTableViewCell  //.xibカスタムセル使用時
-        let apparelDetaModel :ApparelDataModel = formalFassoins[formalFassoins.count - indexPath.row - 1]
+        let apparelDetaModel :ApparelDataModel = formalFassions[formalFassions.count - indexPath.row - 1]
+        
         cell.ApparelText.text = apparelDetaModel.apparelText
         cell.apparelImage.image = UIImage(named: "")
-        
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.apparelLink.text = apparelDetaModel.link
+        
         return cell
     }
     

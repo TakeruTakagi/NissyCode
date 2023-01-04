@@ -6,22 +6,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FormalTableViewCell: UITableViewCell {
+    
     var favoriteFlag: Bool = false
+    let apparel = ApparelDataModel()
+    
+    var realm: Realm!
+    
     @IBOutlet weak var ApparelText: UILabel!
     @IBOutlet weak var starButton: UIButton!
-    @IBAction func starButton(_ sender: Any) {
-        var image: UIImage?
-        if favoriteFlag {
-            guard let starImage = UIImage(named: "favoriteStar") else {return}
-            image = starImage
-        } else {
-            guard let starImage = UIImage(named: "favoriteStarBlank") else {return}
-            image = starImage
+    
+    @IBAction func Like(_ sender: Any) {
+        apparel.starButton = true
+    }
+    
+    @IBAction func add(_ sender: Any) {
+        try! realm.write{
+            realm.add(apparel)
         }
-        starButton.setImage(image, for: UIControl.State())
-        favoriteFlag = !favoriteFlag
     }
     
     @IBOutlet weak var apparelImage: UIImageView!
