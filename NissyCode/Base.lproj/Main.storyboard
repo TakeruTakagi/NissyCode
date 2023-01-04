@@ -5,18 +5,47 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--お気に入り-->
         <scene sceneID="lYL-qW-FYd">
             <objects>
-                <viewController title="お気に入り" id="1ad-zS-qVz" sceneMemberID="viewController">
+                <viewController title="お気に入り" id="1ad-zS-qVz" customClass="FavoriteCollection" customModule="NissyCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWj-47-U04">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-wX-9bl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zc9-gH-7cS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2bA-2L-DwZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bxe-Ir-c7e">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="q7v-iP-mvI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q7v-iP-mvI" firstAttribute="bottom" secondItem="DYS-wX-9bl" secondAttribute="bottom" id="CuX-ob-fEb"/>
+                            <constraint firstItem="q7v-iP-mvI" firstAttribute="trailing" secondItem="DYS-wX-9bl" secondAttribute="trailing" id="JiJ-tZ-bff"/>
+                            <constraint firstItem="DYS-wX-9bl" firstAttribute="top" secondItem="q7v-iP-mvI" secondAttribute="top" id="nO4-JX-ZxQ"/>
+                            <constraint firstItem="DYS-wX-9bl" firstAttribute="leading" secondItem="q7v-iP-mvI" secondAttribute="leading" id="yO5-IB-W4y"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="お気に入り" image="star.fill" catalog="system" id="Uo5-c1-FjR"/>
                 </viewController>
@@ -27,12 +56,24 @@
         <!--カジュアル-->
         <scene sceneID="0g9-Nb-AE8">
             <objects>
-                <viewController id="qiN-hO-KOf" sceneMemberID="viewController">
+                <viewController id="qiN-hO-KOf" customClass="CasualTableViewController" customModule="NissyCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qyq-gt-NE2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-rV-97H">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bi1-J7-EQL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fkk-rV-97H" firstAttribute="leading" secondItem="bi1-J7-EQL" secondAttribute="leading" id="26l-oR-YIS"/>
+                            <constraint firstItem="bi1-J7-EQL" firstAttribute="bottom" secondItem="fkk-rV-97H" secondAttribute="bottom" id="Bi3-8z-tZ2"/>
+                            <constraint firstItem="fkk-rV-97H" firstAttribute="top" secondItem="bi1-J7-EQL" secondAttribute="top" id="bMd-RP-rij"/>
+                            <constraint firstItem="bi1-J7-EQL" firstAttribute="trailing" secondItem="fkk-rV-97H" secondAttribute="trailing" id="r6p-W4-4kW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="カジュアル" image="person.3" catalog="system" id="npd-dE-2xz"/>
                 </viewController>
@@ -43,14 +84,29 @@
         <!--フォーマル・デート-->
         <scene sceneID="Lvz-98-oIa">
             <objects>
-                <viewController id="5gf-Oj-vxM" sceneMemberID="viewController">
+                <viewController id="5gf-Oj-vxM" customClass="FormalTableViewController" customModule="NissyCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oxi-kl-07m">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-Dk-1dS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="der-FD-ycJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lA0-Dk-1dS" firstAttribute="top" secondItem="der-FD-ycJ" secondAttribute="top" id="AZ8-aE-bSQ"/>
+                            <constraint firstItem="der-FD-ycJ" firstAttribute="trailing" secondItem="lA0-Dk-1dS" secondAttribute="trailing" id="ElV-e9-1HN"/>
+                            <constraint firstItem="der-FD-ycJ" firstAttribute="bottom" secondItem="lA0-Dk-1dS" secondAttribute="bottom" id="Sle-Yp-1lY"/>
+                            <constraint firstItem="lA0-Dk-1dS" firstAttribute="leading" secondItem="der-FD-ycJ" secondAttribute="leading" id="u5j-bi-Qtz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="フォーマル・デート" image="heart" catalog="system" id="uqL-bc-dgU"/>
+                    <connections>
+                        <outlet property="FormalTableView" destination="lA0-Dk-1dS" id="Rsw-MO-SuD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzt-EC-sz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
