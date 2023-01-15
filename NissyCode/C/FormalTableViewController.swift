@@ -13,12 +13,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var FormalTableView: UITableView!
     
-    
-    var formalFassions: [ApparelDataModel] = [
-        ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~")
-    ]
-    
-    
+    var formalFassions: [ApparelDataModel] = []
     var apparel = ApparelDataModel()
     
     override func viewDidLoad() {
@@ -37,6 +32,12 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         let formalFassions = formalFassions
         self.formalFassions = formalFassions
         
+        loadData()
+        
+    }
+    
+    func loadData() {
+        formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
