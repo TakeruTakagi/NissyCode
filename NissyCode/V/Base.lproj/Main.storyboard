@@ -71,6 +71,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="カジュアル" image="person.3" catalog="system" id="npd-dE-2xz"/>
+                    <connections>
+                        <outlet property="CasualTableView" destination="fkk-rV-97H" id="MLT-nq-vDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfv-g6-UEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

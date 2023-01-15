@@ -18,8 +18,9 @@
 		254D6364295AF51500A8370A /* FormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D6362295AF51500A8370A /* FormalTableViewCell.swift */; };
 		254D6367295AF61100A8370A /* FormalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D6366295AF61100A8370A /* FormalTableViewController.swift */; };
 		254D6369295B2F2600A8370A /* CasualTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D6368295B2F2600A8370A /* CasualTableViewController.swift */; };
-		254D636B295B2F5700A8370A /* CasualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D636A295B2F5700A8370A /* CasualTableViewCell.swift */; };
 		254D636D295B2FDE00A8370A /* FavoriteCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254D636C295B2FDE00A8370A /* FavoriteCollectionView.swift */; };
+		25941AFA2974598700F0ECE1 /* CasuaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25941AF82974598700F0ECE1 /* CasuaTableViewCell.swift */; };
+		25941AFB2974598700F0ECE1 /* CasualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25941AF92974598700F0ECE1 /* CasualTableViewCell.xib */; };
 		A55A3C378E916A29BA47283C /* Pods_NissyCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700CEAAF62F22FFC39F0B241 /* Pods_NissyCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +38,9 @@
 		254D6362295AF51500A8370A /* FormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalTableViewCell.swift; sourceTree = "<group>"; };
 		254D6366295AF61100A8370A /* FormalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalTableViewController.swift; sourceTree = "<group>"; };
 		254D6368295B2F2600A8370A /* CasualTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasualTableViewController.swift; sourceTree = "<group>"; };
-		254D636A295B2F5700A8370A /* CasualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasualTableViewCell.swift; sourceTree = "<group>"; };
 		254D636C295B2FDE00A8370A /* FavoriteCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionView.swift; sourceTree = "<group>"; };
+		25941AF82974598700F0ECE1 /* CasuaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasuaTableViewCell.swift; sourceTree = "<group>"; };
+		25941AF92974598700F0ECE1 /* CasualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CasualTableViewCell.xib; sourceTree = "<group>"; };
 		3E1702E693E644E57C5061D4 /* Pods-NissyCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NissyCode.debug.xcconfig"; path = "Target Support Files/Pods-NissyCode/Pods-NissyCode.debug.xcconfig"; sourceTree = "<group>"; };
 		49DCB1FBB3B1CB46276A7060 /* Pods-NissyCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NissyCode.release.xcconfig"; path = "Target Support Files/Pods-NissyCode/Pods-NissyCode.release.xcconfig"; sourceTree = "<group>"; };
 		700CEAAF62F22FFC39F0B241 /* Pods_NissyCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NissyCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +116,8 @@
 				254D6366295AF61100A8370A /* FormalTableViewController.swift */,
 				254D6362295AF51500A8370A /* FormalTableViewCell.swift */,
 				254D6368295B2F2600A8370A /* CasualTableViewController.swift */,
-				254D636A295B2F5700A8370A /* CasualTableViewCell.swift */,
+				25941AF82974598700F0ECE1 /* CasuaTableViewCell.swift */,
+				25941AF92974598700F0ECE1 /* CasualTableViewCell.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				251EF6DE2944ABC10010F5C1 /* LaunchScreen.storyboard in Resources */,
+				25941AFB2974598700F0ECE1 /* CasualTableViewCell.xib in Resources */,
 				254D6361295A9B1C00A8370A /* FormalTableViewCell.xib in Resources */,
 				251EF6DB2944ABC10010F5C1 /* Assets.xcassets in Resources */,
 				251EF6D92944ABBE0010F5C1 /* Main.storyboard in Resources */,
@@ -252,10 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				254D636B295B2F5700A8370A /* CasualTableViewCell.swift in Sources */,
 				251EF6D62944ABBE0010F5C1 /* ViewController.swift in Sources */,
 				254D636D295B2FDE00A8370A /* FavoriteCollectionView.swift in Sources */,
 				254D635D295A928400A8370A /* ApparelDataModel.swift in Sources */,
+				25941AFA2974598700F0ECE1 /* CasuaTableViewCell.swift in Sources */,
 				251EF6D22944ABBE0010F5C1 /* AppDelegate.swift in Sources */,
 				251EF6D42944ABBE0010F5C1 /* SceneDelegate.swift in Sources */,
 				254D6367295AF61100A8370A /* FormalTableViewController.swift in Sources */,
