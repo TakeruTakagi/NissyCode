@@ -17,20 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-wX-9bl">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dja-Zv-0zY">
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zc9-gH-7cS">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uxO-5e-Sub">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2bA-2L-DwZ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hkQ-Xi-FX8">
                                         <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bxe-Ir-c7e">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3wQ-Nc-xWW">
                                             <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -40,18 +41,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q7v-iP-mvI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="q7v-iP-mvI" firstAttribute="bottom" secondItem="DYS-wX-9bl" secondAttribute="bottom" id="CuX-ob-fEb"/>
-                            <constraint firstItem="q7v-iP-mvI" firstAttribute="trailing" secondItem="DYS-wX-9bl" secondAttribute="trailing" id="JiJ-tZ-bff"/>
-                            <constraint firstItem="DYS-wX-9bl" firstAttribute="top" secondItem="q7v-iP-mvI" secondAttribute="top" id="nO4-JX-ZxQ"/>
-                            <constraint firstItem="DYS-wX-9bl" firstAttribute="leading" secondItem="q7v-iP-mvI" secondAttribute="leading" id="yO5-IB-W4y"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="お気に入り" image="star.fill" catalog="system" id="Uo5-c1-FjR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97d-7K-1iw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="749"/>
+            <point key="canvasLocation" x="936.64122137404581" y="748.59154929577471"/>
         </scene>
         <!--カジュアル-->
         <scene sceneID="0g9-Nb-AE8">
@@ -110,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzt-EC-sz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1842" y="749"/>
+            <point key="canvasLocation" x="1841.9847328244275" y="748.59154929577471"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="H3Y-Eg-dAE">
@@ -119,7 +114,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tri-BZ-1dO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="1ad-zS-qVz" kind="relationship" relationship="viewControllers" id="9ot-qq-NkG"/>

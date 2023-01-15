@@ -6,24 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
+
+
 
 class FormalTableViewCell: UITableViewCell {
-    var favoriteFlag: Bool = false
+    
     @IBOutlet weak var ApparelText: UILabel!
     @IBOutlet weak var starButton: UIButton!
-    @IBAction func starButton(_ sender: Any) {
-        var image: UIImage?
-        if favoriteFlag {
-            guard let starImage = UIImage(named: "favoriteStar") else {return}
-            image = starImage
-        } else {
-            guard let starImage = UIImage(named: "favoriteStarBlank") else {return}
-            image = starImage
-        }
-        starButton.setImage(image, for: UIControl.State())
-        favoriteFlag = !favoriteFlag
-    }
-    
     @IBOutlet weak var apparelImage: UIImageView!
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
@@ -33,10 +23,10 @@ class FormalTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
     }
-    
 }
