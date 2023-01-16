@@ -48,7 +48,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FormalTableViewCell  //.xibカスタムセル使用時
         let apparelDetaModel :ApparelDataModel = casualFassions[casualFassions.count - indexPath.row - 1]
         
-        cell.ApparelText.text = apparelDetaModel.apparelText
+        cell.apparelText.text = apparelDetaModel.apparelText
         
         cell.apparelImage.image = UIImage(named: "")
         cell.onepointText.text = apparelDetaModel.onePointText

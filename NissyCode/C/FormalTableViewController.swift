@@ -32,6 +32,8 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         let formalFassions = formalFassions
         self.formalFassions = formalFassions
         
+        
+                
         loadData()
         
     }
@@ -48,8 +50,8 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FormalTableViewCell  //.xibカスタムセル使用時
         let apparelDetaModel :ApparelDataModel = formalFassions[formalFassions.count - indexPath.row - 1]
         
-        cell.ApparelText.text = apparelDetaModel.apparelText
-        
+        cell.apparelText.text = apparelDetaModel.apparelText
+//        cell.starButton.tintColor =
         cell.apparelImage.image = UIImage(named: "")
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.apparelLink.text = apparelDetaModel.link

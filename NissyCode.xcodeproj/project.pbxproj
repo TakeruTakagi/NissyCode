@@ -102,6 +102,7 @@
 			children = (
 				251EF6D72944ABBE0010F5C1 /* Main.storyboard */,
 				254D635F295A9B1C00A8370A /* FormalTableViewCell.xib */,
+				25941AF92974598700F0ECE1 /* CasualTableViewCell.xib */,
 				251EF6DA2944ABC10010F5C1 /* Assets.xcassets */,
 				251EF6DC2944ABC10010F5C1 /* LaunchScreen.storyboard */,
 			);
@@ -117,7 +118,6 @@
 				254D6362295AF51500A8370A /* FormalTableViewCell.swift */,
 				254D6368295B2F2600A8370A /* CasualTableViewController.swift */,
 				25941AF82974598700F0ECE1 /* CasuaTableViewCell.swift */,
-				25941AF92974598700F0ECE1 /* CasualTableViewCell.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
