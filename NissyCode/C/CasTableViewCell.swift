@@ -10,7 +10,7 @@ import RealmSwift
 
 
 
-class FormalTableViewCell: UITableViewCell {
+class CasualTableViewCell: UITableViewCell {
     
     @IBOutlet weak var apparelText: UILabel!
     @IBOutlet weak var starButton: UIButton!

@@ -71,6 +71,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="カジュアル" image="person.3" catalog="system" id="npd-dE-2xz"/>
+                    <connections>
+                        <outlet property="CasualTableView" destination="fkk-rV-97H" id="1xq-Fo-fOa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfv-g6-UEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +103,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="フォーマル・デート" image="heart" catalog="system" id="uqL-bc-dgU"/>
                     <connections>
-                        <outlet property="FormalTableView" destination="lA0-Dk-1dS" id="Rsw-MO-SuD"/>
+                        <outlet property="FormalTableView" destination="lA0-Dk-1dS" id="X63-Wa-XZq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzt-EC-sz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
