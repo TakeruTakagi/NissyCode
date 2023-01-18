@@ -101,6 +101,11 @@
 			isa = PBXGroup;
 			children = (
 				251EF6D72944ABBE0010F5C1 /* Main.storyboard */,
+<<<<<<< HEAD
+=======
+				254D635F295A9B1C00A8370A /* FormalTableViewCell.xib */,
+				25941AF92974598700F0ECE1 /* CasualTableViewCell.xib */,
+>>>>>>> 6fc43a8efb2f0cab2022174cbe7a14f6eb313ba7
 				251EF6DA2944ABC10010F5C1 /* Assets.xcassets */,
 				251EF6DC2944ABC10010F5C1 /* LaunchScreen.storyboard */,
 				254D635F295A9B1C00A8370A /* FormalTableViewCell.xib */,
