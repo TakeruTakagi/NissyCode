@@ -49,8 +49,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         let apparelDetaModel :ApparelDataModel = casualFassions[casualFassions.count - indexPath.row - 1]
         
         cell.ApparelText.text = apparelDetaModel.apparelText
-        
-        cell.apparelImage.image = UIImage(named: "")
+        cell.apparelImage.image = UIImage(named: apparelDetaModel.apparelImage)
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.apparelLink.text = apparelDetaModel.link
         

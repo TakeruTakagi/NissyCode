@@ -18,6 +18,8 @@ class FormalTableViewCell: UITableViewCell {
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
