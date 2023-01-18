@@ -49,7 +49,6 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         let apparelDetaModel :ApparelDataModel = formalFassions[formalFassions.count - indexPath.row - 1]
         
         cell.apparelText.text = apparelDetaModel.apparelText
-        
         cell.apparelImage.image = UIImage(named: apparelDetaModel.apparelImage)
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.apparelLink.text = apparelDetaModel.link

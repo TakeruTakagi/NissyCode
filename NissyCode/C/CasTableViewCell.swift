@@ -19,6 +19,10 @@ class CasualTableViewCell: UITableViewCell {
     @IBOutlet weak var apparelLink: UILabel!
     
     var apparel = ApparelDataModel()
+    let lip = UIImage(named: "lip")
+    let white = UIImage(named: "白")
+    let state = UIControl.State.normal
+    let vib = UIImpactFeedbackGenerator(style: .medium)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,13 +37,21 @@ class CasualTableViewCell: UITableViewCell {
     }
     //お気に入り機能
     @IBAction func Like(_ sender: Any) {
+        vib.impactOccurred()
         //ボタンの切り替わり
         apparel.starButton = apparel.starButton == false ? true : false
         //ボタンの色変わり　→ 後から画像との差し替えを考える
         if apparel.starButton == true {
-            starButton.tintColor = .blue
+            starButton.tintColor = .clear
+            starButton.setImage(lip, for: state)
         }else {
-            starButton.tintColor = .gray
+            starButton.tintColor = .lightGray
+            starButton.setImage(white, for: .normal)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
     }
 }
