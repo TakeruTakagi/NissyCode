@@ -8,6 +8,9 @@
 import UIKit
 import RealmSwift
 
+protocol CustomCellDelegate {
+    func like(apparel: ApparelDataModel)
+}
 
 
 class FormalTableViewCell: UITableViewCell {
@@ -17,6 +20,8 @@ class FormalTableViewCell: UITableViewCell {
     @IBOutlet weak var apparelImage: UIImageView!
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
+    
+    var delegate: CustomCellDelegate?
     
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
@@ -50,5 +55,6 @@ class FormalTableViewCell: UITableViewCell {
             starButton.tintColor = .lightGray
             starButton.setImage(white, for: .normal)
         }
+        delegate?.like(apparel: apparel)
     }
 }

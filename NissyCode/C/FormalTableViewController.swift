@@ -8,13 +8,15 @@
 import UIKit
 import RealmSwift
 
-class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-   
+class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate{
+    
     
     @IBOutlet weak var FormalTableView: UITableView!
     
     var formalFassions: [ApparelDataModel] = []
     var apparel = ApparelDataModel()
+    
+    var FC = FormalTableViewCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,16 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    func cellDelegate(){
+        FC.delegate = self
+    }
+    
+    func like(apparel: ApparelDataModel) {
+        if apparel.starButton == true {
+            print("正常にメソッドを呼び出している")
+        }
+    }
+    
     func loadData() {
         formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
     }
@@ -55,6 +67,6 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
-    
-    
 }
+
+
