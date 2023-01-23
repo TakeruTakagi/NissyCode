@@ -5,21 +5,26 @@
 //  Created by 髙木　武 on 2022/12/27.
 //
 
+import Foundation
 import UIKit
 import RealmSwift
 
 protocol CustomCellDelegate {
-    func like(apparel: ApparelDataModel)
+    func like(apparelData: ApparelDataModel)
 }
 
 
 class FormalTableViewCell: UITableViewCell {
+    
+    
     
     @IBOutlet weak var apparelText: UILabel!
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var apparelImage: UIImageView!
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
+    
+    var realm: Realm!
     
     var delegate: CustomCellDelegate?
     
@@ -40,6 +45,9 @@ class FormalTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    
+    
     //お気に入り機能
     @IBAction func Like(_ sender: Any) {
         vib.impactOccurred()
@@ -55,6 +63,8 @@ class FormalTableViewCell: UITableViewCell {
             starButton.tintColor = .lightGray
             starButton.setImage(white, for: .normal)
         }
-        delegate?.like(apparel: apparel)
+        delegate?.like(apparelData: apparel) //
     }
+    
+    
 }

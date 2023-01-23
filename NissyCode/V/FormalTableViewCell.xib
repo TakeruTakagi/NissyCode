@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="444" id="KGk-i7-Jjw" customClass="FormalTableViewCell" customModule="NissyCode" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="444"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="456" id="KGk-i7-Jjw" customClass="FormalTableViewCell" customModule="NissyCode" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="444"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WkU-MB-KnP">
@@ -39,19 +39,21 @@
                             <constraint firstAttribute="height" constant="128" id="nuZ-BT-rTS"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelLinkApparelLinkApparelLinkApparelLinkApparelLink" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adj-hk-EN1">
-                        <rect key="frame" x="10" y="373.66666666666669" width="300" height="50.333333333333314"/>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelLinkApparelLinkApparelLinkApparelLinkApparelLink" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adj-hk-EN1">
+                        <rect key="frame" x="10" y="385.66666666666669" width="300" height="50.333333333333314"/>
+                        <gestureRecognizers/>
                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="onepointTextonepointTextonepointTextonepointText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjI-yA-cgb">
-                        <rect key="frame" x="10" y="203.33333333333331" width="300" height="150.33333333333331"/>
+                        <rect key="frame" x="10" y="203.33333333333331" width="300" height="162.33333333333331"/>
                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <gestureRecognizers/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="adj-hk-EN1" secondAttribute="trailing" constant="10" id="1RZ-mV-LBo"/>
                     <constraint firstItem="adj-hk-EN1" firstAttribute="leading" secondItem="mjI-yA-cgb" secondAttribute="leading" id="78n-hS-i67"/>
@@ -79,7 +81,7 @@
                 <outlet property="onepointText" destination="mjI-yA-cgb" id="azk-gc-mDw"/>
                 <outlet property="starButton" destination="6xP-8m-SiY" id="M0r-Yc-LqQ"/>
             </connections>
-            <point key="canvasLocation" x="138.93129770992365" y="160.56338028169014"/>
+            <point key="canvasLocation" x="138.93129770992365" y="156.33802816901408"/>
         </tableViewCell>
     </objects>
 </document>

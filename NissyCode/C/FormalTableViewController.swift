@@ -16,7 +16,8 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     var formalFassions: [ApparelDataModel] = []
     var apparel = ApparelDataModel()
     
-    var FC = FormalTableViewCell()
+    var FC = FormalTableViewCell() //FormalTableViewCellのインスタンス
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +36,8 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         self.formalFassions = formalFassions
         
         loadData()
-        
     }
     
-    func cellDelegate(){
-        FC.delegate = self
-    }
-    
-    func like(apparel: ApparelDataModel) {
-        if apparel.starButton == true {
-            print("正常にメソッドを呼び出している")
-        }
-    }
     
     func loadData() {
         formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
@@ -59,14 +50,26 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FormalTableViewCell  //.xibカスタムセル使用時
         let apparelDetaModel :ApparelDataModel = formalFassions[formalFassions.count - indexPath.row - 1]
-        
+        cell.apparel = apparelDetaModel
         cell.apparelText.text = apparelDetaModel.apparelText
-        cell.apparelImage.image = UIImage(named: apparelDetaModel.apparelImage)
+        cell.apparelImage?.image = UIImage(named: apparelDetaModel.apparelImage)
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.apparelLink.text = apparelDetaModel.link
         
+        cell.delegate = self
+        
         return cell
     }
+    
+    //Realmの保存処理を
+    func like(apparelData: ApparelDataModel) {
+        FC.delegate = self
+        let realm = try! Realm()
+        try! realm.write {
+            apparel.apparelText = apparelData.apparelText
+            apparel.apparelImage = apparelData.apparelImage
+            realm.add(apparel)
+        }
+        
+    }
 }
-
-
