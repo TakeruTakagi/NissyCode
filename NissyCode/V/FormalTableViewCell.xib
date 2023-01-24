@@ -81,7 +81,7 @@
                 <outlet property="onepointText" destination="mjI-yA-cgb" id="azk-gc-mDw"/>
                 <outlet property="starButton" destination="6xP-8m-SiY" id="M0r-Yc-LqQ"/>
             </connections>
-            <point key="canvasLocation" x="138.93129770992365" y="156.33802816901408"/>
+            <point key="canvasLocation" x="138.93129770992365" y="155.63380281690141"/>
         </tableViewCell>
     </objects>
 </document>

@@ -16,8 +16,6 @@ protocol CustomCellDelegate {
 
 class FormalTableViewCell: UITableViewCell {
     
-    
-    
     @IBOutlet weak var apparelText: UILabel!
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var apparelImage: UIImageView!
@@ -39,14 +37,10 @@ class FormalTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
-    
-    
     
     //お気に入り機能
     @IBAction func Like(_ sender: Any) {

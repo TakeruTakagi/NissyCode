@@ -9,14 +9,16 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class CasualTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-   
+class CasualTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate{
+    
     
     @IBOutlet weak var CasualTableView: UITableView!
     
     var fassions: [ApparelDataModel] = []
     var apparel = ApparelDataModel()
     
+    var CC =  CasualTableViewCell()//CasualTableViewCellのインスタンス
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +36,8 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         self.fassions = Fassions
         
         loadData()
-        
     }
+    
     
     func loadData() {
         fassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
@@ -54,8 +56,19 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.apparelLink.text = apparelDetaModel.link
         
+        cell.delegate = self
+        
         return cell
     }
     
-    
+    //Realmの保存処理を
+    func like(apparelData: ApparelDataModel) {
+        CC.delegate = self
+        let realm = try! Realm()
+        try! realm.write {
+            apparel.apparelText = apparelData.apparelText
+            apparel.apparelImage = apparelData.apparelImage
+            realm.add(apparel)
+        }
+    }
 }

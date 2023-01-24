@@ -13,6 +13,8 @@
 		251EF6D92944ABBE0010F5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251EF6D72944ABBE0010F5C1 /* Main.storyboard */; };
 		251EF6DB2944ABC10010F5C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 251EF6DA2944ABC10010F5C1 /* Assets.xcassets */; };
 		251EF6DE2944ABC10010F5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251EF6DC2944ABC10010F5C1 /* LaunchScreen.storyboard */; };
+		252A5E62297FDA4B007376C1 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252A5E60297FDA4B007376C1 /* FavoriteTableViewCell.swift */; };
+		252A5E63297FDA4B007376C1 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 252A5E61297FDA4B007376C1 /* FavoriteTableViewCell.xib */; };
 		25326ABA2977E66400A18EB8 /* CasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25326AB82977E66400A18EB8 /* CasTableViewCell.swift */; };
 		25326ABB2977E66400A18EB8 /* CasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25326AB92977E66400A18EB8 /* CasTableViewCell.xib */; };
 		25326ABD297A99E500A18EB8 /* FavoriteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25326ABC297A99E500A18EB8 /* FavoriteTableView.swift */; };
@@ -33,6 +35,8 @@
 		251EF6DA2944ABC10010F5C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		251EF6DD2944ABC10010F5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		251EF6DF2944ABC10010F5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		252A5E60297FDA4B007376C1 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		252A5E61297FDA4B007376C1 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FavoriteTableViewCell.xib; path = ../C/FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		25326AB82977E66400A18EB8 /* CasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasTableViewCell.swift; sourceTree = "<group>"; };
 		25326AB92977E66400A18EB8 /* CasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CasTableViewCell.xib; path = ../C/CasTableViewCell.xib; sourceTree = "<group>"; };
 		25326ABC297A99E500A18EB8 /* FavoriteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				251EF6D72944ABBE0010F5C1 /* Main.storyboard */,
+				252A5E61297FDA4B007376C1 /* FavoriteTableViewCell.xib */,
 				254D635F295A9B1C00A8370A /* FormalTableViewCell.xib */,
 				25326AB92977E66400A18EB8 /* CasTableViewCell.xib */,
 				251EF6DC2944ABC10010F5C1 /* LaunchScreen.storyboard */,
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				25326ABC297A99E500A18EB8 /* FavoriteTableView.swift */,
+				252A5E60297FDA4B007376C1 /* FavoriteTableViewCell.swift */,
 				254D6366295AF61100A8370A /* FormalTableViewController.swift */,
 				254D6362295AF51500A8370A /* FormalTableViewCell.swift */,
 				254D6368295B2F2600A8370A /* CasualTableViewController.swift */,
@@ -204,6 +210,7 @@
 				25326ABB2977E66400A18EB8 /* CasTableViewCell.xib in Resources */,
 				251EF6DB2944ABC10010F5C1 /* Assets.xcassets in Resources */,
 				251EF6D92944ABBE0010F5C1 /* Main.storyboard in Resources */,
+				252A5E63297FDA4B007376C1 /* FavoriteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +272,7 @@
 				25326ABA2977E66400A18EB8 /* CasTableViewCell.swift in Sources */,
 				254D6364295AF51500A8370A /* FormalTableViewCell.swift in Sources */,
 				254D6369295B2F2600A8370A /* CasualTableViewController.swift in Sources */,
+				252A5E62297FDA4B007376C1 /* FavoriteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

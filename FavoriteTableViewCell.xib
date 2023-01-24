@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="278" id="3Zw-pP-Scx" userLabel="Favorite Table View Cell" customClass="FavoriteTableViewCell" customModule="NissyCode">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Zw-pP-Scx" id="s3m-Cq-HhQ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxE-6p-Dkj">
+                        <rect key="frame" x="10" y="15" width="300" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-we-n1N">
+                        <rect key="frame" x="26" y="70" width="268" height="182"/>
+                    </imageView>
+                </subviews>
+                <gestureRecognizers/>
+                <constraints>
+                    <constraint firstItem="SxE-6p-Dkj" firstAttribute="top" secondItem="s3m-Cq-HhQ" secondAttribute="top" constant="15" id="1B3-hR-wnn"/>
+                    <constraint firstItem="SxE-6p-Dkj" firstAttribute="leading" secondItem="s3m-Cq-HhQ" secondAttribute="leading" constant="10" id="AqB-N6-TWQ"/>
+                    <constraint firstItem="ObS-we-n1N" firstAttribute="top" secondItem="SxE-6p-Dkj" secondAttribute="bottom" constant="30" id="Xl4-Qn-osB"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ObS-we-n1N" secondAttribute="bottom" constant="15" id="dl6-F3-iOH"/>
+                    <constraint firstAttribute="trailing" secondItem="SxE-6p-Dkj" secondAttribute="trailing" constant="10" id="jhD-Oi-Mql"/>
+                    <constraint firstItem="ObS-we-n1N" firstAttribute="leading" secondItem="s3m-Cq-HhQ" secondAttribute="leadingMargin" constant="10" id="lYg-sg-gCs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ObS-we-n1N" secondAttribute="trailing" constant="10" id="tQg-Sb-KlO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="uzP-OR-7lD"/>
+            <connections>
+                <outlet property="favoriteImage" destination="ObS-we-n1N" id="I3I-Mo-lUO"/>
+                <outlet property="favoriteName" destination="SxE-6p-Dkj" id="KzU-O6-HuC"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="92.957746478873247"/>
+        </tableViewCell>
+    </objects>
+</document>

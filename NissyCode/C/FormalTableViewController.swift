@@ -5,6 +5,7 @@
 //  Created by 髙木　武 on 2022/12/27.
 //
 
+import Foundation
 import UIKit
 import RealmSwift
 
@@ -18,8 +19,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     var FC = FormalTableViewCell() //FormalTableViewCellのインスタンス
     
-    
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
         
         FormalTableView.delegate = self
@@ -70,6 +70,5 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
             apparel.apparelImage = apparelData.apparelImage
             realm.add(apparel)
         }
-        
     }
 }

@@ -19,6 +19,10 @@ class CasualTableViewCell: UITableViewCell {
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
     
+    var realm: Realm!
+    
+    var delegate: CustomCellDelegate?
+    
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
     let white = UIImage(named: "白")
@@ -49,10 +53,7 @@ class CasualTableViewCell: UITableViewCell {
             starButton.tintColor = .lightGray
             starButton.setImage(white, for: .normal)
         }
+        delegate?.like(apparelData: apparel)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-    }
 }

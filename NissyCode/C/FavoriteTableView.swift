@@ -14,42 +14,54 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var favoriteTableView: UITableView!
     
-    var favoriteImage: [ApparelDataModel] = []
+    
+    var apparel = ApparelDataModel()
+    var favoriteItem: [ApparelDataModel] = []
     var realm: Realm!
-    var fassions: [ApparelDataModel] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoriteTableView.delegate = self
-        favoriteTableView.dataSource = self
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        favoriteTableView.delegate = self
+        favoriteTableView.dataSource = self
+        favoriteTableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
+        favoriteTableView.estimatedRowHeight = 1000
+        favoriteTableView.rowHeight = UITableView.automaticDimension
+        
         setData()
         favoriteTableView.reloadData()
     }
     
-    func setData() {
-        let realm = try! Realm()
-        let favoriteFassions = realm.objects(ApparelDataModel.self)
-        
-        fassions = Array(favoriteFassions)
-        
-        if fassions.count > 0 {
-            print("\(fassions[0].apparelImage)を取得")
-        }
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteImage.count
+        return favoriteItem.count
     }
     
+    
+    //どんなセルを表示するか
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = favoriteTableView.dequeueReusableCell(withIdentifier: "favoriteTableView", for: indexPath)
+        let cell = favoriteTableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FavoriteTableViewCell
+        
+        let apparelDatamodel: ApparelDataModel = favoriteItem[favoriteItem.count - indexPath.row - 1]
+        cell.favoriteName.text = apparelDatamodel.apparelText
+        cell.favoriteImage.image = UIImage(named: apparelDatamodel.apparelImage)
         return cell
     }
     
     
+    //Realmからデータを取得
+    func setData() {
+        let realm = try! Realm()
+        let result = realm.objects(ApparelDataModel.self)
+        favoriteItem = Array(result)
+        
+        if favoriteItem.count > 0 {
+            print(favoriteItem[0].apparelImage)
+        }
+    }
 }
