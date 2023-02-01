@@ -10,18 +10,29 @@ import UIKit
 import RealmSwift
 
 
-class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate2{
+    
+    
+    
     
     @IBOutlet weak var favoriteTableView: UITableView!
     
     
     var apparel = ApparelDataModel()
     var favoriteItem: [ApparelDataModel] = []
+    
     var realm: Realm!
+    
+    var FVC = FavoriteTableViewCell()
+    var FC = FormalTableViewCell()
+    var CC = CasualTableViewCell()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        favoriteTableView.delegate = self
+        favoriteTableView.dataSource = self
+        setData()
     }
     
     
@@ -32,7 +43,6 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         favoriteTableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         favoriteTableView.estimatedRowHeight = 1000
         favoriteTableView.rowHeight = UITableView.automaticDimension
-        
         setData()
         favoriteTableView.reloadData()
     }
@@ -46,13 +56,27 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
     //どんなセルを表示するか
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoriteTableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FavoriteTableViewCell
-        
         let apparelDatamodel: ApparelDataModel = favoriteItem[favoriteItem.count - indexPath.row - 1]
+        print(indexPath.row - 1 )
         cell.favoriteName.text = apparelDatamodel.apparelText
         cell.favoriteImage.image = UIImage(named: apparelDatamodel.apparelImage)
+        
+        cell.delegate = self
+        
         return cell
     }
     
+    
+    func offlike(apparel: ApparelDataModel, index: Int) {
+        FVC.delegate = self
+        let realm = try! Realm()
+        try! realm.write {
+            let item = favoriteItem[index]
+            realm.delete(item)
+        }
+        setData()
+        favoriteTableView.reloadData()
+    }
     
     //Realmからデータを取得
     func setData() {

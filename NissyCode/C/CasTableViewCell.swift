@@ -45,7 +45,9 @@ class CasualTableViewCell: UITableViewCell {
         vib.impactOccurred()
         //ボタンの切り替わり
         apparel.starButton = apparel.starButton == false ? true : false
-        //ボタンの色変わり　→ 後から画像との差し替えを考える
+        print(apparel.starButton)
+        
+        //ボタン　→ 画像との差し替え
         if apparel.starButton == true {
             starButton.tintColor = .clear
             starButton.setImage(lip, for: state)

@@ -22,7 +22,6 @@ class FormalTableViewCell: UITableViewCell {
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
     
-    var realm: Realm!
     
     var delegate: CustomCellDelegate?
     
@@ -48,8 +47,8 @@ class FormalTableViewCell: UITableViewCell {
         //ボタンの切り替わり
         apparel.starButton = apparel.starButton == false ? true : false
         print(apparel.starButton)
-        //ボタンの色変わり　→ 後から画像との差し替えを考える
         
+        //ボタン → 画像との差し替え
         if apparel.starButton == true {
             starButton.tintColor = .clear
             starButton.setImage(lip, for: state)
@@ -57,7 +56,9 @@ class FormalTableViewCell: UITableViewCell {
             starButton.tintColor = .lightGray
             starButton.setImage(white, for: .normal)
         }
-        delegate?.like(apparelData: apparel) //
+        if apparel.starButton == true {
+            delegate?.like(apparelData: apparel) //
+        }
     }
     
     

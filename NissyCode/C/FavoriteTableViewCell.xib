@@ -9,39 +9,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="206" id="KGk-i7-Jjw" customClass="FavoriteTableViewCell" customModule="NissyCode" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="229" id="KGk-i7-Jjw" customClass="FavoriteTableViewCell" customModule="NissyCode" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="229"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="229"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ths-da-L2c">
-                        <rect key="frame" x="10" y="15" width="300" height="21"/>
+                        <rect key="frame" x="10" y="10" width="90.666666666666671" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7Z-R9-f6n">
+                        <rect key="frame" x="237" y="5" width="73" height="44"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="lip" title=""/>
+                        <connections>
+                            <action selector="offLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="urU-4L-Dz0"/>
+                        </connections>
+                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-iB-iBW">
-                        <rect key="frame" x="10" y="36" width="300" height="155"/>
+                        <rect key="frame" x="10" y="64" width="300" height="155"/>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ths-da-L2c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="23g-fE-tb3"/>
-                    <constraint firstItem="Ths-da-L2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="4Np-nP-Odf"/>
-                    <constraint firstAttribute="trailing" secondItem="Ths-da-L2c" secondAttribute="trailing" constant="10" id="QvW-TO-bET"/>
-                    <constraint firstAttribute="bottom" secondItem="NqR-iB-iBW" secondAttribute="bottom" constant="15" id="R63-5I-OPK"/>
-                    <constraint firstItem="NqR-iB-iBW" firstAttribute="top" secondItem="Ths-da-L2c" secondAttribute="bottom" id="g1q-eY-9DI"/>
-                    <constraint firstAttribute="trailing" secondItem="NqR-iB-iBW" secondAttribute="trailing" constant="10" id="qPL-3y-PWf"/>
-                    <constraint firstItem="NqR-iB-iBW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yee-cC-vqK"/>
+                    <constraint firstItem="l7Z-R9-f6n" firstAttribute="centerY" secondItem="Ths-da-L2c" secondAttribute="centerY" id="9cP-du-hZY"/>
+                    <constraint firstItem="NqR-iB-iBW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="C6B-8d-rmf"/>
+                    <constraint firstAttribute="trailing" secondItem="NqR-iB-iBW" secondAttribute="trailing" constant="10" id="UW5-mh-u26"/>
+                    <constraint firstAttribute="bottom" secondItem="NqR-iB-iBW" secondAttribute="bottom" constant="10" id="Ua4-sT-Avx"/>
+                    <constraint firstItem="NqR-iB-iBW" firstAttribute="top" secondItem="l7Z-R9-f6n" secondAttribute="bottom" constant="15" id="VyX-KC-JNB"/>
+                    <constraint firstItem="l7Z-R9-f6n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oyt-0m-MJX"/>
+                    <constraint firstItem="Ths-da-L2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rUH-wD-njQ"/>
+                    <constraint firstAttribute="trailing" secondItem="l7Z-R9-f6n" secondAttribute="trailing" constant="10" id="t3i-Mu-asz"/>
+                    <constraint firstItem="Ths-da-L2c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yYv-HD-LMF"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favoriteButton" destination="l7Z-R9-f6n" id="Jle-EU-t0F"/>
                 <outlet property="favoriteImage" destination="NqR-iB-iBW" id="31i-AE-XyR"/>
                 <outlet property="favoriteName" destination="Ths-da-L2c" id="wrn-5T-hsg"/>
             </connections>
-            <point key="canvasLocation" x="106.87022900763358" y="76.760563380281695"/>
+            <point key="canvasLocation" x="106.87022900763358" y="84.859154929577471"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="lip" width="49" height="30"/>
+    </resources>
 </document>

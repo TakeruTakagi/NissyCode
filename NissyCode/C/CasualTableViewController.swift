@@ -63,12 +63,15 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     //Realmの保存処理を
     func like(apparelData: ApparelDataModel) {
+        if apparel.starButton == true {
+        print("Realmに保存")
         CC.delegate = self
         let realm = try! Realm()
-        try! realm.write {
-            apparel.apparelText = apparelData.apparelText
-            apparel.apparelImage = apparelData.apparelImage
-            realm.add(apparel)
+            try! realm.write {
+                apparel.apparelText = apparelData.apparelText
+                apparel.apparelImage = apparelData.apparelImage
+                realm.add(apparel)
+            }
         }
     }
 }

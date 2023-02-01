@@ -61,8 +61,11 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
-    //Realmの保存処理を
+    
+    //Realmの保存処理
     func like(apparelData: ApparelDataModel) {
+        
+        print("Realmに保存")
         FC.delegate = self
         let realm = try! Realm()
         try! realm.write {
