@@ -27,7 +27,7 @@ class FormalTableViewCell: UITableViewCell {
     
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
-    let white = UIImage(named: "白")
+    let star = UIImage(named: "星")
     let state = UIControl.State.normal
     let vib = UIImpactFeedbackGenerator(style: .medium)
     
@@ -54,7 +54,7 @@ class FormalTableViewCell: UITableViewCell {
             starButton.setImage(lip, for: state)
         }else {
             starButton.tintColor = .lightGray
-            starButton.setImage(white, for: .normal)
+            starButton.setImage(star, for: .normal)
         }
         if apparel.starButton == true {
             delegate?.like(apparelData: apparel) //

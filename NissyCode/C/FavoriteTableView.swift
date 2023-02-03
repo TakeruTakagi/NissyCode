@@ -10,9 +10,7 @@ import UIKit
 import RealmSwift
 
 
-class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate2{
-    
-    
+class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDeleteDelegate{
     
     
     @IBOutlet weak var favoriteTableView: UITableView!
@@ -61,14 +59,14 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.favoriteName.text = apparelDatamodel.apparelText
         cell.favoriteImage.image = UIImage(named: apparelDatamodel.apparelImage)
         
-        cell.delegate = self
+        cell.deleteDelegate = self
         
         return cell
     }
     
     
     func offlike(apparel: ApparelDataModel, index: Int) {
-        FVC.delegate = self
+        FVC.deleteDelegate = self
         let realm = try! Realm()
         try! realm.write {
             let item = favoriteItem[index]

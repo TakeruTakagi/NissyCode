@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-protocol CustomCellDelegate2 {
+protocol CustomCellDeleteDelegate {
     func offlike(apparel: ApparelDataModel, index:Int) //セルのパスを取ってくる
 }
 
@@ -19,11 +19,10 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet weak var favoriteButton: UIButton!
     
     var apparel = ApparelDataModel()
-    var index = 0
+    var index: Int = 0
     
-    var delegate: CustomCellDelegate2?
+    var deleteDelegate: CustomCellDeleteDelegate?
     
-    let white = UIImage(named: "白")
     let state = UIControl.State.normal
     let vib = UIImpactFeedbackGenerator(style: .medium)
     
@@ -43,9 +42,6 @@ class FavoriteTableViewCell: UITableViewCell {
         apparel.starButton = false
         print(apparel.starButton)
         
-        if apparel.starButton == false {
-            favoriteButton.setImage(white, for: .normal)
-        }
-        delegate?.offlike(apparel: apparel, index: index)
+        deleteDelegate?.offlike(apparel: apparel, index: index)
     }
 }

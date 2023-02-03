@@ -31,15 +31,16 @@
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-iB-iBW">
-                        <rect key="frame" x="10" y="64" width="300" height="155"/>
+                        <rect key="frame" x="10" y="49" width="300" height="175"/>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="l7Z-R9-f6n" firstAttribute="centerY" secondItem="Ths-da-L2c" secondAttribute="centerY" id="9cP-du-hZY"/>
                     <constraint firstItem="NqR-iB-iBW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="C6B-8d-rmf"/>
+                    <constraint firstItem="NqR-iB-iBW" firstAttribute="top" secondItem="l7Z-R9-f6n" secondAttribute="bottom" id="EOk-3i-D16"/>
                     <constraint firstAttribute="trailing" secondItem="NqR-iB-iBW" secondAttribute="trailing" constant="10" id="UW5-mh-u26"/>
-                    <constraint firstAttribute="bottom" secondItem="NqR-iB-iBW" secondAttribute="bottom" constant="10" id="Ua4-sT-Avx"/>
-                    <constraint firstItem="NqR-iB-iBW" firstAttribute="top" secondItem="l7Z-R9-f6n" secondAttribute="bottom" constant="15" id="VyX-KC-JNB"/>
+                    <constraint firstAttribute="bottom" secondItem="NqR-iB-iBW" secondAttribute="bottom" constant="5" id="Ua4-sT-Avx"/>
+                    <constraint firstItem="NqR-iB-iBW" firstAttribute="top" secondItem="l7Z-R9-f6n" secondAttribute="bottom" id="VyX-KC-JNB"/>
                     <constraint firstItem="l7Z-R9-f6n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oyt-0m-MJX"/>
                     <constraint firstItem="Ths-da-L2c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rUH-wD-njQ"/>
                     <constraint firstAttribute="trailing" secondItem="l7Z-R9-f6n" secondAttribute="trailing" constant="10" id="t3i-Mu-asz"/>

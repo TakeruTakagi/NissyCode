@@ -19,13 +19,12 @@ class CasualTableViewCell: UITableViewCell {
     @IBOutlet weak var onepointText: UILabel!
     @IBOutlet weak var apparelLink: UILabel!
     
-    var realm: Realm!
     
     var delegate: CustomCellDelegate?
     
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
-    let white = UIImage(named: "白")
+    let star = UIImage(named: "星")
     let state = UIControl.State.normal
     let vib = UIImpactFeedbackGenerator(style: .medium)
     
@@ -40,6 +39,7 @@ class CasualTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+   
     //お気に入り機能
     @IBAction func Like(_ sender: Any) {
         vib.impactOccurred()
@@ -53,9 +53,11 @@ class CasualTableViewCell: UITableViewCell {
             starButton.setImage(lip, for: state)
         }else {
             starButton.tintColor = .lightGray
-            starButton.setImage(white, for: .normal)
+            starButton.setImage(star, for: .normal)
         }
-        delegate?.like(apparelData: apparel)
+        if apparel.starButton == true{
+            delegate?.like(apparelData: apparel)
+        }
     }
     
 }
