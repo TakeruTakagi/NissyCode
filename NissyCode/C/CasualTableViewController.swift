@@ -75,4 +75,6 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
             realm.add(setApparelData)
         }
     }
+    
+    
 }

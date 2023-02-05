@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate{
+class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate, URLDelegate{
     
     
     @IBOutlet weak var FormalTableView: UITableView!
@@ -38,7 +38,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func loadData() {
-        formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
+        formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "https://wear.jp/item/35045872/"))
         formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
         formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
         formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
@@ -55,13 +55,11 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.apparelText.text = apparelDetaModel.apparelText
         cell.apparelImage?.image = UIImage(named: apparelDetaModel.apparelImage)
         cell.onepointText.text = apparelDetaModel.onePointText
-        cell.apparelLink.text = apparelDetaModel.link
         
         cell.delegate = self
         
         return cell
     }
-    
     
     //Realmの保存処理
     func like(apparelData: ApparelDataModel) {
@@ -77,4 +75,13 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
             realm.add(setApparelData)
         }
     }
+    
+    //URL添付機能
+    func openURL(apparelURL: ApparelDataModel, index: String) {
+        FC.delegate = self
+        
+        guard let url = URL(string: apparel.link) else { return }
+            UIApplication.shared.open(url)
+    }
+    
 }

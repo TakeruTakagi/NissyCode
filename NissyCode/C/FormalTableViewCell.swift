@@ -13,6 +13,10 @@ protocol CustomCellDelegate {
     func like(apparelData: ApparelDataModel)
 }
 
+protocol URLDelegate {
+    func openURL(apparelURL: ApparelDataModel, index: String)
+}
+
 
 class FormalTableViewCell: UITableViewCell {
     
@@ -20,10 +24,12 @@ class FormalTableViewCell: UITableViewCell {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var apparelImage: UIImageView!
     @IBOutlet weak var onepointText: UILabel!
-    @IBOutlet weak var apparelLink: UILabel!
+    @IBOutlet weak var Link: UIButton!
     
     
     var delegate: CustomCellDelegate?
+    
+    var URLDelegate: URLDelegate?
     
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
@@ -40,6 +46,7 @@ class FormalTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
+
     
     //お気に入り機能
     @IBAction func Like(_ sender: Any) {
@@ -59,6 +66,11 @@ class FormalTableViewCell: UITableViewCell {
         if apparel.starButton == true {
             delegate?.like(apparelData: apparel) //
         }
+    }
+    
+    //URLを開く
+    @IBAction func openURL(_ sender: Any) {
+        URLDelegate?.openURL(apparelURL: apparel, index: apparel.link)
     }
     
     
