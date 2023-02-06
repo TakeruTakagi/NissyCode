@@ -61,7 +61,7 @@ class CasualTableViewCell: UITableViewCell {
     }
     
     @IBAction func openURL(_ sender: Any) {
-        tableViewCellDelegate?.openURL(apparelURL: apparel, index: String())
+        tableViewCellDelegate?.openURL(apparelURL: apparel, index: apparel.link)
     }
     
 }
