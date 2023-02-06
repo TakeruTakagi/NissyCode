@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class CasualTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate{
+class CasualTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewCellDelegate{
+    
+    
     
     
     @IBOutlet weak var CasualTableView: UITableView!
@@ -54,9 +56,8 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.apparelText.text = apparelDetaModel.apparelText
         cell.apparelImage.image = UIImage(named: apparelDetaModel.apparelImage)
         cell.onepointText.text = apparelDetaModel.onePointText
-        cell.apparelLink.text = apparelDetaModel.link
         
-        cell.delegate = self
+        cell.tableViewCellDelegate = self
         
         return cell
     }
@@ -69,11 +70,19 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         setApparelData.apparelImage = apparelData.apparelImage
         
         print("Realmに保存")
-        CC.delegate = self
+        CC.tableViewCellDelegate = self
         let realm = try! Realm()
         try! realm.write {
             realm.add(setApparelData)
         }
+    }
+    
+    //URLを開く
+    func openURL(apparelURL: ApparelDataModel, index: String) {
+        CC.tableViewCellDelegate = self
+        
+        guard let url = URL(string: index) else { return }
+            UIApplication.shared.open(url)
     }
     
     

@@ -9,13 +9,12 @@ import Foundation
 import UIKit
 import RealmSwift
 
-protocol CustomCellDelegate {
+protocol TableViewCellDelegate {
     func like(apparelData: ApparelDataModel)
-}
-
-protocol URLDelegate {
     func openURL(apparelURL: ApparelDataModel, index: String)
 }
+
+
 
 
 class FormalTableViewCell: UITableViewCell {
@@ -24,12 +23,10 @@ class FormalTableViewCell: UITableViewCell {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var apparelImage: UIImageView!
     @IBOutlet weak var onepointText: UILabel!
-    @IBOutlet weak var Link: UIButton!
+    @IBOutlet weak var link: UIButton!
     
     
-    var delegate: CustomCellDelegate?
-    
-    var URLDelegate: URLDelegate?
+    var tableViewCellDelegate: TableViewCellDelegate?
     
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
@@ -64,13 +61,13 @@ class FormalTableViewCell: UITableViewCell {
             starButton.setImage(star, for: .normal)
         }
         if apparel.starButton == true {
-            delegate?.like(apparelData: apparel) //
+            tableViewCellDelegate?.like(apparelData: apparel)
         }
     }
     
     //URLを開く
     @IBAction func openURL(_ sender: Any) {
-        URLDelegate?.openURL(apparelURL: apparel, index: apparel.link)
+        tableViewCellDelegate?.openURL(apparelURL: apparel, index: String())
     }
     
     

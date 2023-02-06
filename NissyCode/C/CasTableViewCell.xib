@@ -47,6 +47,9 @@
                         <rect key="frame" x="61" y="269" width="198" height="35"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="類似のアイテムを見る"/>
+                        <connections>
+                            <action selector="openURL:" destination="ijg-uD-Q8C" eventType="touchUpInside" id="e0A-wg-h3Y"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -70,6 +73,7 @@
             <connections>
                 <outlet property="apparelImage" destination="Sf2-1j-CuS" id="O6K-V3-lqI"/>
                 <outlet property="apparelText" destination="bTo-as-ucd" id="UX6-hu-swQ"/>
+                <outlet property="link" destination="HJh-m6-T2H" id="l07-wk-Xhv"/>
                 <outlet property="onepointText" destination="hzm-rJ-AGb" id="9Ns-LW-YKp"/>
                 <outlet property="starButton" destination="jTQ-HA-mcg" id="AAI-Ou-Yzr"/>
             </connections>

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDelegate, URLDelegate{
+class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewCellDelegate{
     
     
     @IBOutlet weak var FormalTableView: UITableView!
@@ -39,9 +39,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func loadData() {
         formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "https://wear.jp/item/35045872/"))
-        formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
-        formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
-        formalFassions.append(ApparelDataModel(id: "1", apparelText: "ニット", apparelImage: "1", starButton: false, onePointText: "ゆるふわにっと", link: "http~"))
+       
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +54,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.apparelImage?.image = UIImage(named: apparelDetaModel.apparelImage)
         cell.onepointText.text = apparelDetaModel.onePointText
         
-        cell.delegate = self
+        cell.tableViewCellDelegate = self
         
         return cell
     }
@@ -69,7 +67,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         setApparelData.apparelImage = apparelData.apparelImage
         
         print("Realmに保存")
-        FC.delegate = self
+        FC.tableViewCellDelegate = self
         let realm = try! Realm()
         try! realm.write {
             realm.add(setApparelData)
@@ -78,10 +76,12 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     //URL添付機能
     func openURL(apparelURL: ApparelDataModel, index: String) {
-        FC.delegate = self
+        FC.tableViewCellDelegate = self
         
-        guard let url = URL(string: apparel.link) else { return }
+        guard let url = URL(string: index) else { return }
             UIApplication.shared.open(url)
+        print("URLタップ")
     }
+    
     
 }

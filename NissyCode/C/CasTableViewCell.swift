@@ -17,10 +17,10 @@ class CasualTableViewCell: UITableViewCell {
     @IBOutlet weak var starButton: UIButton!
     @IBOutlet weak var apparelImage: UIImageView!
     @IBOutlet weak var onepointText: UILabel!
-    @IBOutlet weak var apparelLink: UILabel!
+    @IBOutlet weak var link: UIButton!
     
     
-    var delegate: CustomCellDelegate?
+    var tableViewCellDelegate: TableViewCellDelegate?
     
     var apparel = ApparelDataModel()
     let lip = UIImage(named: "lip")
@@ -56,8 +56,12 @@ class CasualTableViewCell: UITableViewCell {
             starButton.setImage(star, for: .normal)
         }
         if apparel.starButton == true{
-            delegate?.like(apparelData: apparel)
+            tableViewCellDelegate?.like(apparelData: apparel)
         }
+    }
+    
+    @IBAction func openURL(_ sender: Any) {
+        tableViewCellDelegate?.openURL(apparelURL: apparel, index: String())
     }
     
 }

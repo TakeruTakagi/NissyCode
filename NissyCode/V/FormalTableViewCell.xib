@@ -72,9 +72,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="Link" destination="jTC-Gw-Onk" id="RuF-TW-Hal"/>
                 <outlet property="apparelImage" destination="LM9-fz-dku" id="wSJ-Cz-8Li"/>
                 <outlet property="apparelText" destination="WkU-MB-KnP" id="m8R-lv-yC0"/>
+                <outlet property="link" destination="jTC-Gw-Onk" id="TJc-TG-WRU"/>
                 <outlet property="onepointText" destination="mjI-yA-cgb" id="azk-gc-mDw"/>
                 <outlet property="starButton" destination="6xP-8m-SiY" id="M0r-Yc-LqQ"/>
             </connections>
