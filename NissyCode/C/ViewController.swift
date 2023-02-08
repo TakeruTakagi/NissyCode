@@ -5,16 +5,14 @@
 //  Created by 髙木　武 on 2022/12/10.
 //
 
-import Foundation
 import UIKit
 
-class ViewController: UITabBarController {
-
+class ViewController: UITabBarController{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UITabBar.appearance().shadowImage = UIImage()
     }
-
-
+    
+    
 }
-

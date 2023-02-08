@@ -14,9 +14,6 @@ protocol TableViewCellDelegate {
     func openURL(apparelURL: ApparelDataModel, index: String)
 }
 
-
-
-
 class FormalTableViewCell: UITableViewCell {
     
     @IBOutlet weak var apparelText: UILabel!

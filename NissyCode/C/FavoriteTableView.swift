@@ -28,6 +28,13 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        favoriteTableView.backgroundColor = UIColor(named: "FavoriteColor")
+        // 背景の透過
+        UITabBar.appearance().backgroundImage = UIImage()
+        // 境界線の透過
+        UITabBar.appearance().shadowImage = UIImage()
+        
         favoriteTableView.delegate = self
         favoriteTableView.dataSource = self
         setData()
@@ -58,7 +65,7 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         print(indexPath.row - 1 )
         cell.favoriteName.text = apparelDatamodel.apparelText
         cell.favoriteImage.image = UIImage(named: apparelDatamodel.apparelImage)
-        
+        cell.backgroundColor = UIColor(named: "FavoriteColor")
         cell.deleteDelegate = self
         
         return cell

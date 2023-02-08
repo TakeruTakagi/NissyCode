@@ -1,4 +1,5 @@
 PODS:
+  - RAMAnimatedTabBarController (5.2.0)
   - Realm (10.32.3):
     - Realm/Headers (= 10.32.3)
   - Realm/Headers (10.32.3)
@@ -6,17 +7,20 @@ PODS:
     - Realm (= 10.32.3)
 
 DEPENDENCIES:
+  - RAMAnimatedTabBarController
   - RealmSwift (~> 10)
 
 SPEC REPOS:
   trunk:
+    - RAMAnimatedTabBarController
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   Realm: fdf6732924dc5e69e30e0db2c11e869f92b53f3d
   RealmSwift: 7c181da8fa1c2fe613656a77c198d6a3dc3879a1
 
-PODFILE CHECKSUM: 771a6598b778d4f4e3ccb361ff4ac2cceb405fac
+PODFILE CHECKSUM: 8237c1d0063a79ff9e50687c771b3aa8c984621a
 
 COCOAPODS: 1.11.3
