@@ -26,7 +26,7 @@ class FormalTableViewCell: UITableViewCell {
     var tableViewCellDelegate: TableViewCellDelegate?
     
     var apparel = ApparelDataModel()
-    let lip = UIImage(named: "lip")
+    let lip = UIImage(named: "formalLip")
     let star = UIImage(named: "星")
     let state = UIControl.State.normal
     let vib = UIImpactFeedbackGenerator(style: .medium)

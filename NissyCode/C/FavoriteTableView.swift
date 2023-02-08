@@ -89,8 +89,6 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         let result = realm.objects(ApparelDataModel.self)
         favoriteItem = Array(result)
         
-        if favoriteItem.count > 0 {
-            print(favoriteItem[0].apparelImage)
-        }
+        
     }
 }

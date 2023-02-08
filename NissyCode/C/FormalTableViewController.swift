@@ -23,6 +23,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         FormalTableView.backgroundColor = UIColor(named: "FormalCellColor")
+        
         // 背景の透過
         UITabBar.appearance().backgroundImage = UIImage()
         // 境界線の透過
