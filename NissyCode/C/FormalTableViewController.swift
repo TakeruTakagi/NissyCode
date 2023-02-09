@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import SwiftMessages
 
 class FormalTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewCellDelegate{
     
@@ -48,6 +49,8 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         formalFassions.append(ApparelDataModel(id: "23", apparelText: "シャツ（ブラウン）", apparelImage: "", starButton: false, onePointText: "シャツを入れることでスマートに見えます。靴はプレーントゥシューズなどを合わせるとよりキマります✨", link: "https://zozo.jp/shop/sitry/goods/59175841/?did=98090523"))
         
         formalFassions.append(ApparelDataModel(id: "24", apparelText: "ロンT（ブラック）", apparelImage: "", starButton: false, onePointText: "黒や白のパンツで合わせモノトーンなコーデもNissyによく見られます👀", link: "https://zozo.jp/shop/billabong/goods/70107862/?did=115107779"))
+        
+        formalFassions.append(ApparelDataModel(id: "33", apparelText: "ロンT（ベージュ）", apparelImage: "", starButton: false, onePointText: "どんな色にもあいますが、黒などに合わせると落ち着いた雰囲気が出ますね😊", link: "https://store.shopping.yahoo.co.jp/lux-style/aa-0989.html#"))
         
         formalFassions.append(ApparelDataModel(id: "25", apparelText: "フォトプリントロンT（カーキ）", apparelImage: "", starButton: false, onePointText: "淡い色のパンツを合わせるとコーデしやすいと思います", link: "https://zozo.jp/shop/billabong/goods-sale/67855269/?did=111694648"))
         
@@ -96,6 +99,23 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         try! realm.write {
             realm.add(setApparelData)
         }
+        
+        //ボタンを押した際のメッセージ
+        let view = MessageView.viewFromNib(layout: .cardView)
+        view.configureContent(body: "お気に入りに追加されました")
+        view.configureDropShadow()
+        view.layoutMarginAdditions = UIEdgeInsets(top: 20,
+                              left: 20,
+                              bottom: 20,
+                              right: 20)
+        view.configureTheme(.success)
+        view.titleLabel?.isHidden = true
+        view.iconLabel?.isHidden = true
+        view.button?.isHidden = true
+        // 角丸を指定します
+        (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
+        // アラートを表示します
+        SwiftMessages.show(view: view)
     }
     
     //URL添付機能

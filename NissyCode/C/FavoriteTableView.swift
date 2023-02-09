@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import SwiftMessages
 
 
 class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomCellDeleteDelegate{
@@ -81,6 +82,23 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         }
         setData()
         favoriteTableView.reloadData()
+        
+        //ボタンを押した際のメッセージ
+        let view = MessageView.viewFromNib(layout: .cardView)
+        view.configureContent(body: "お気に入りから削除されました")
+        view.configureDropShadow()
+        view.layoutMarginAdditions = UIEdgeInsets(top: 20,
+                              left: 20,
+                              bottom: 20,
+                              right: 20)
+        view.configureTheme(.success)
+        view.titleLabel?.isHidden = true
+        view.iconLabel?.isHidden = true
+        view.button?.isHidden = true
+        // 角丸を指定します
+        (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
+        // アラートを表示します
+        SwiftMessages.show(view: view)
     }
     
     //Realmからデータを取得

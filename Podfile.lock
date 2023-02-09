@@ -5,22 +5,28 @@ PODS:
   - Realm/Headers (10.32.3)
   - RealmSwift (10.32.3):
     - Realm (= 10.32.3)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
 
 DEPENDENCIES:
   - RAMAnimatedTabBarController
   - RealmSwift (~> 10)
+  - SwiftMessages
 
 SPEC REPOS:
   trunk:
     - RAMAnimatedTabBarController
     - Realm
     - RealmSwift
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   Realm: fdf6732924dc5e69e30e0db2c11e869f92b53f3d
   RealmSwift: 7c181da8fa1c2fe613656a77c198d6a3dc3879a1
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
 
-PODFILE CHECKSUM: 8237c1d0063a79ff9e50687c771b3aa8c984621a
+PODFILE CHECKSUM: 616a7ebbb80fbba8d56a833ee77eda61494232a4
 
 COCOAPODS: 1.11.3
