@@ -10,7 +10,6 @@ import UIKit
 import RealmSwift
 
 
-
 class CasualTableViewCell: UITableViewCell {
     
     @IBOutlet weak var apparelText: UILabel!

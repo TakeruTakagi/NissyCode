@@ -46,27 +46,27 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func loadData() {
-        formalFassions.append(ApparelDataModel(id: "23", apparelText: "シャツ（ブラウン）", apparelImage: "", starButton: false, onePointText: "シャツを入れることでスマートに見えます。靴はプレーントゥシューズなどを合わせるとよりキマります✨", link: "https://zozo.jp/shop/sitry/goods/59175841/?did=98090523"))
+        formalFassions.append(ApparelDataModel(id: "23", apparelText: "シャツ（ブラウン）", apparelImage: "23", starButton: false, onePointText: "愛tearsっぽい。靴はプレーントゥシューズなどを合わせるとよりキマりますね✨", link: "https://zozo.jp/shop/sitry/goods/59175841/?did=98090523"))
         
-        formalFassions.append(ApparelDataModel(id: "24", apparelText: "ロンT（ブラック）", apparelImage: "", starButton: false, onePointText: "黒や白のパンツで合わせモノトーンなコーデもNissyによく見られます👀", link: "https://zozo.jp/shop/billabong/goods/70107862/?did=115107779"))
+        formalFassions.append(ApparelDataModel(id: "24", apparelText: "ロンT（ブラック）", apparelImage: "24", starButton: false, onePointText: "デニム、モノトーンでのコーデもNissyによく見られます👀", link: "https://zozo.jp/shop/billabong/goods/70107862/?did=115107779"))
         
-        formalFassions.append(ApparelDataModel(id: "33", apparelText: "ロンT（ベージュ）", apparelImage: "", starButton: false, onePointText: "どんな色にもあいますが、黒などに合わせると落ち着いた雰囲気が出ますね😊", link: "https://store.shopping.yahoo.co.jp/lux-style/aa-0989.html#"))
+        formalFassions.append(ApparelDataModel(id: "33", apparelText: "ロンT（ベージュ）", apparelImage: "33", starButton: false, onePointText: "どんな色にもあいますが、黒などに合わせても落ち着いた雰囲気が出ますね😊", link: "https://store.shopping.yahoo.co.jp/lux-style/aa-0989.html#"))
         
-        formalFassions.append(ApparelDataModel(id: "25", apparelText: "フォトプリントロンT（カーキ）", apparelImage: "", starButton: false, onePointText: "淡い色のパンツを合わせるとコーデしやすいと思います", link: "https://zozo.jp/shop/billabong/goods-sale/67855269/?did=111694648"))
+        formalFassions.append(ApparelDataModel(id: "25", apparelText: "フォトプリントロンT（カーキ）", apparelImage: "25", starButton: false, onePointText: "デニムに合わせると違った明るみを楽しめます🔆", link: "https://zozo.jp/shop/billabong/goods-sale/67855269/?did=111694648"))
         
-        formalFassions.append(ApparelDataModel(id: "26", apparelText: "ニット（黒）", apparelImage: "", starButton: false, onePointText: "黒、キャメルなど暗めの色のパンツを合わせるといいかも✨", link: "https://zozo.jp/shop/studious/goods-sale/66982020/?did=110260341"))
+        formalFassions.append(ApparelDataModel(id: "26", apparelText: "ニット（黒）", apparelImage: "26", starButton: false, onePointText: "黒、キャメルなど暗めの色のパンツを合わせるのもおすすめ✨", link: "https://zozo.jp/shop/studious/goods-sale/66982020/?did=110260341"))
         
-        formalFassions.append(ApparelDataModel(id: "27", apparelText: "ニット（白）", apparelImage: "", starButton: false, onePointText: "少し大きめのサイズを選んでゆるっとした印象を♫\nNissy感もUP♪", link: "https://zozo.jp/shop/jiggysshop/goods/67929966/?did=111839378"))
+        formalFassions.append(ApparelDataModel(id: "27", apparelText: "ニット（白）", apparelImage: "27", starButton: false, onePointText: "少し大きめのサイズを選んでゆるっとした印象を♫\nNissy感もUP♪", link: "https://zozo.jp/shop/jiggysshop/goods/67929966/?did=111839378"))
         
-        formalFassions.append(ApparelDataModel(id: "28", apparelText: "テーラードジャケット", apparelImage: "", starButton: false, onePointText: "インナーはモノトーンのものを選ぶといいかも✨", link: "https://zozo.jp/shop/nanouniverse/goods-sale/68030258/?did=111993705&rid=1203"))
+        formalFassions.append(ApparelDataModel(id: "28", apparelText: "テーラードジャケット", apparelImage: "28", starButton: false, onePointText: "インナーはTシャツやニットもいいかも✨\n重ね着目的ならジャケットはサイズに注意🫢", link: "https://zozo.jp/shop/nanouniverse/goods-sale/68030258/?did=111993705&rid=1203"))
         
-        formalFassions.append(ApparelDataModel(id: "29", apparelText: "チェスターコート（キャメル）", apparelImage: "", starButton: false, onePointText: "Nissyコーデをするならチェスターコーデは外せませんね😊", link: "https://zozo.jp/shop/astronomy/goods-sale/60887084/?did=112282312&rid=1203"))
+        formalFassions.append(ApparelDataModel(id: "29", apparelText: "チェスターコート（キャメル）", apparelImage: "29", starButton: false, onePointText: "Nissyコーデをするならチェスターコーデは外せませんね😊", link: "https://zozo.jp/shop/astronomy/goods-sale/60887084/?did=112282312&rid=1203"))
         
-        formalFassions.append(ApparelDataModel(id: "30", apparelText: "ロングコート（ブラック）", apparelImage: "", starButton: false, onePointText: "モノトーンを意識するとAddicted感が出ますね✨", link: "https://zozo.jp/shop/nordsud/goods-sale/53066228/?did=88145120&rid=1203"))
+        formalFassions.append(ApparelDataModel(id: "30", apparelText: "ロングコート（ブラック）", apparelImage: "30", starButton: false, onePointText: "モノトーンを意識してAddicted気分を✨", link: "https://zozo.jp/shop/nordsud/goods-sale/53066228/?did=88145120&rid=1203"))
         
-        formalFassions.append(ApparelDataModel(id: "31", apparelText: "ウールフラシブルゾン", apparelImage: "", starButton: false, onePointText: "パンツもゆったりめのものが合うと思います♩", link: "https://zozo.jp/shop/hare/goods-sale/68949477/?did=113391097&utm_source=google&utm_medium=cpc&utm_campaign=200701_nuu&utm_term=004_&utm_content=ad_nuu_10&gclid=Cj0KCQiA54KfBhCKARIsAJzSrdqGkbU8L3oD8egJCXZY_iawrbyliP7pWehfA0PSUsWJSvY3PmvucQ4aAswcEALw_wcB"))
+        formalFassions.append(ApparelDataModel(id: "31", apparelText: "ウールフラシブルゾン", apparelImage: "31", starButton: false, onePointText: "ゆるふわな印象を与えます♩\nゆったりめのパンツもおすすめ😊", link: "https://zozo.jp/shop/hare/goods-sale/68949477/?did=113391097&utm_source=google&utm_medium=cpc&utm_campaign=200701_nuu&utm_term=004_&utm_content=ad_nuu_10&gclid=Cj0KCQiA54KfBhCKARIsAJzSrdqGkbU8L3oD8egJCXZY_iawrbyliP7pWehfA0PSUsWJSvY3PmvucQ4aAswcEALw_wcB"))
         
-        formalFassions.append(ApparelDataModel(id: "32", apparelText: "チェックシャツ", apparelImage: "", starButton: false, onePointText: "NapTimeを参照しています", link: "https://zozo.jp/shop/ulysses/goods/67157687/?did=110551066"))
+        formalFassions.append(ApparelDataModel(id: "32", apparelText: "チェックシャツ", apparelImage: "32", starButton: false, onePointText: "無地のパンツを合わせると着こなしやすいと思います♩", link: "https://zozo.jp/shop/ulysses/goods/67157687/?did=110551066"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,7 +86,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
-    //Realmの保存処理
+    //Realmの保存処理　デリゲートメソッド
     func like(apparelData: ApparelDataModel) {
         
         let setApparelData = ApparelDataModel()
@@ -105,9 +105,9 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         view.configureContent(body: "お気に入りに追加されました")
         view.configureDropShadow()
         view.layoutMarginAdditions = UIEdgeInsets(top: 20,
-                              left: 20,
-                              bottom: 20,
-                              right: 20)
+                                                  left: 20,
+                                                  bottom: 20,
+                                                  right: 20)
         view.configureTheme(.success)
         view.titleLabel?.isHidden = true
         view.iconLabel?.isHidden = true
@@ -118,12 +118,12 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         SwiftMessages.show(view: view)
     }
     
-    //URL添付機能
+    //URL添付機能　デリゲートメソッド
     func openURL(apparelURL: ApparelDataModel, index: String) {
         FC.tableViewCellDelegate = self
         
         guard let url = URL(string: index) else { return }
-            UIApplication.shared.open(url)
+        UIApplication.shared.open(url)
     }
     
     

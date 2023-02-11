@@ -10,10 +10,8 @@ import UIKit
 import RealmSwift
 import SwiftMessages
 
+
 class CasualTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewCellDelegate{
-    
-    
-    
     
     @IBOutlet weak var CasualTableView: UITableView!
     
