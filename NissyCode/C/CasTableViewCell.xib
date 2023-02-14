@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTo-as-ucd">
-                        <rect key="frame" x="10.000000000000007" y="10" width="108.66666666666669" height="38"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <rect key="frame" x="10" y="10" width="100.66666666666667" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
