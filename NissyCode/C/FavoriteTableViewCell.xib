@@ -25,7 +25,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7Z-R9-f6n">
                         <rect key="frame" x="237" y="5" width="73" height="31"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="favoriteLip" title=""/>
+                        <buttonConfiguration key="configuration" style="plain" image="Lip" title=""/>
                         <connections>
                             <action selector="offLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="urU-4L-Dz0"/>
                         </connections>
@@ -61,6 +61,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="favoriteLip" width="49" height="30"/>
+        <image name="Lip" width="49" height="30"/>
     </resources>
 </document>

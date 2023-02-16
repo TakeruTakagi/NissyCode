@@ -32,7 +32,7 @@
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LM9-fz-dku">
-                        <rect key="frame" x="4" y="45.666666666666657" width="341" height="320"/>
+                        <rect key="frame" x="0.0" y="45.666666666666657" width="349" height="320"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="320" id="S57-QA-m99"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="UZB-7W-mPq"/>
