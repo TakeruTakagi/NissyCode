@@ -9,76 +9,77 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="510" id="ijg-uD-Q8C" customClass="CasualTableViewCell" customModule="NissyCode" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="576" id="n4n-Fa-Vba" userLabel="Casual Table View Cell" customClass="CasualTableViewCell" customModule="NissyCode" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="576"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ijg-uD-Q8C" id="Tvp-Hd-AQ3">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n4n-Fa-Vba" id="Www-ND-ix4">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="576"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTo-as-ucd">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApparelText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wj9-cz-XHw">
                         <rect key="frame" x="10" y="10" width="100.66666666666667" height="38"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTQ-HA-mcg">
-                        <rect key="frame" x="247" y="0.0" width="68" height="58"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-x7-hA1">
+                        <rect key="frame" x="271" y="0.0" width="68" height="58"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="星"/>
                         <connections>
-                            <action selector="Like:" destination="ijg-uD-Q8C" eventType="touchUpInside" id="XaF-wG-s7I"/>
+                            <action selector="Like:" destination="n4n-Fa-Vba" eventType="touchUpInside" id="UHm-nc-c6l"/>
                         </connections>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sf2-1j-CuS">
-                        <rect key="frame" x="0.0" y="58" width="320" height="320"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KY6-R0-Bnw">
+                        <rect key="frame" x="4" y="63" width="340" height="380"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="320" id="AnJ-F0-LYP"/>
-                            <constraint firstAttribute="height" constant="320" id="PCk-IV-G2H"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="dHi-pN-U8J"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="380" id="p8P-E4-EvJ"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="onepointTextonepointTextonepointTextonepointText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzm-rJ-AGb">
-                        <rect key="frame" x="10" y="393" width="300" height="62.666666666666686"/>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeR-uZ-iAf">
+                        <rect key="frame" x="75.666666666666686" y="525" width="198" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="類似のアイテムを見る"/>
+                        <connections>
+                            <action selector="openURL:" destination="n4n-Fa-Vba" eventType="touchUpInside" id="TlC-wA-9Tw"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="onepointTextonepointTextonepointTextonepointText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INS-sh-hDz">
+                        <rect key="frame" x="10" y="453" width="329" height="52"/>
                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-m6-T2H">
-                        <rect key="frame" x="61" y="470.66666666666669" width="198" height="34.333333333333314"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="類似のアイテムを見る"/>
-                        <connections>
-                            <action selector="openURL:" destination="ijg-uD-Q8C" eventType="touchUpInside" id="e0A-wg-h3Y"/>
-                        </connections>
-                    </button>
                 </subviews>
+                <gestureRecognizers/>
                 <constraints>
-                    <constraint firstItem="HJh-m6-T2H" firstAttribute="centerX" secondItem="hzm-rJ-AGb" secondAttribute="centerX" id="049-L4-uST"/>
-                    <constraint firstItem="bTo-as-ucd" firstAttribute="leading" secondItem="Tvp-Hd-AQ3" secondAttribute="leading" constant="10" id="0nU-vI-W44"/>
-                    <constraint firstItem="bTo-as-ucd" firstAttribute="top" secondItem="Tvp-Hd-AQ3" secondAttribute="top" constant="10" id="14S-g9-nGB"/>
-                    <constraint firstAttribute="bottom" secondItem="HJh-m6-T2H" secondAttribute="bottom" constant="5" id="8lm-sg-m8c"/>
-                    <constraint firstItem="Sf2-1j-CuS" firstAttribute="leading" secondItem="Tvp-Hd-AQ3" secondAttribute="leading" id="QU0-PD-KYT"/>
-                    <constraint firstItem="hzm-rJ-AGb" firstAttribute="leading" secondItem="Tvp-Hd-AQ3" secondAttribute="leading" constant="10" id="S9S-od-Llb"/>
-                    <constraint firstItem="Sf2-1j-CuS" firstAttribute="top" secondItem="jTQ-HA-mcg" secondAttribute="bottom" id="TMB-vd-kEf"/>
-                    <constraint firstItem="HJh-m6-T2H" firstAttribute="top" secondItem="hzm-rJ-AGb" secondAttribute="bottom" constant="15" id="Uen-cB-8Ux"/>
-                    <constraint firstAttribute="trailing" secondItem="jTQ-HA-mcg" secondAttribute="trailing" constant="5" id="Ulk-A2-xHZ"/>
-                    <constraint firstAttribute="trailing" secondItem="Sf2-1j-CuS" secondAttribute="trailing" id="WvB-UQ-lhy"/>
-                    <constraint firstAttribute="trailing" secondItem="hzm-rJ-AGb" secondAttribute="trailing" constant="10" id="Zr8-Rh-jOe"/>
-                    <constraint firstItem="jTQ-HA-mcg" firstAttribute="centerY" secondItem="bTo-as-ucd" secondAttribute="centerY" id="pWF-GQ-7bI"/>
-                    <constraint firstItem="jTQ-HA-mcg" firstAttribute="top" secondItem="Tvp-Hd-AQ3" secondAttribute="top" id="phE-Qo-wZD"/>
-                    <constraint firstItem="hzm-rJ-AGb" firstAttribute="top" secondItem="Sf2-1j-CuS" secondAttribute="bottom" constant="15" id="yps-oB-SUd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jeR-uZ-iAf" secondAttribute="bottom" constant="5" id="1ZU-BA-2P0"/>
+                    <constraint firstItem="6d5-x7-hA1" firstAttribute="centerY" secondItem="wj9-cz-XHw" secondAttribute="centerY" id="7br-6j-kDO"/>
+                    <constraint firstItem="wj9-cz-XHw" firstAttribute="top" secondItem="Www-ND-ix4" secondAttribute="top" constant="10" id="7lG-Dj-qsc"/>
+                    <constraint firstItem="jeR-uZ-iAf" firstAttribute="top" secondItem="INS-sh-hDz" secondAttribute="bottom" constant="20" id="AKZ-j5-VDp"/>
+                    <constraint firstItem="KY6-R0-Bnw" firstAttribute="leading" secondItem="Www-ND-ix4" secondAttribute="leadingMargin" constant="-16" id="DC5-59-DOJ"/>
+                    <constraint firstItem="jeR-uZ-iAf" firstAttribute="centerX" secondItem="Www-ND-ix4" secondAttribute="centerX" id="HIM-e2-61u"/>
+                    <constraint firstItem="wj9-cz-XHw" firstAttribute="leading" secondItem="Www-ND-ix4" secondAttribute="leading" constant="10" id="Myo-G1-LPb"/>
+                    <constraint firstAttribute="trailing" secondItem="6d5-x7-hA1" secondAttribute="trailing" constant="10" id="Sr6-3O-7D1"/>
+                    <constraint firstAttribute="trailing" secondItem="INS-sh-hDz" secondAttribute="trailing" constant="10" id="Ugr-d0-swf"/>
+                    <constraint firstItem="6d5-x7-hA1" firstAttribute="top" secondItem="Www-ND-ix4" secondAttribute="top" id="VjG-RC-cvK"/>
+                    <constraint firstItem="INS-sh-hDz" firstAttribute="leading" secondItem="Www-ND-ix4" secondAttribute="leading" constant="10" id="dxC-d5-kiE"/>
+                    <constraint firstItem="KY6-R0-Bnw" firstAttribute="top" secondItem="6d5-x7-hA1" secondAttribute="bottom" constant="5" id="fYx-MF-CoK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="KY6-R0-Bnw" secondAttribute="trailing" constant="-15" id="kJG-tY-dWm"/>
+                    <constraint firstItem="INS-sh-hDz" firstAttribute="top" secondItem="KY6-R0-Bnw" secondAttribute="bottom" constant="10" id="ypD-kn-Rcw"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="vN3-dl-6kV"/>
+            <viewLayoutGuide key="safeArea" id="TZC-bB-0V0"/>
             <connections>
-                <outlet property="apparelImage" destination="Sf2-1j-CuS" id="O6K-V3-lqI"/>
-                <outlet property="apparelText" destination="bTo-as-ucd" id="UX6-hu-swQ"/>
-                <outlet property="link" destination="HJh-m6-T2H" id="l07-wk-Xhv"/>
-                <outlet property="onepointText" destination="hzm-rJ-AGb" id="9Ns-LW-YKp"/>
-                <outlet property="starButton" destination="jTQ-HA-mcg" id="AAI-Ou-Yzr"/>
+                <outlet property="apparelImage" destination="KY6-R0-Bnw" id="En6-Rj-HoO"/>
+                <outlet property="apparelText" destination="wj9-cz-XHw" id="wcK-r6-tT1"/>
+                <outlet property="link" destination="jeR-uZ-iAf" id="e0F-xj-OxG"/>
+                <outlet property="onepointText" destination="INS-sh-hDz" id="HdM-Zv-p0u"/>
+                <outlet property="starButton" destination="6d5-x7-hA1" id="Hh7-zi-hPi"/>
             </connections>
-            <point key="canvasLocation" x="138.93129770992365" y="13.380281690140846"/>
+            <point key="canvasLocation" x="139.69465648854961" y="15.492957746478874"/>
         </tableViewCell>
     </objects>
     <resources>

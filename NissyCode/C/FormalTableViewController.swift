@@ -80,6 +80,8 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.apparel = apparelDetaModel
         cell.apparelText.text = apparelDetaModel.apparelText
         cell.apparelImage?.image = UIImage(named: apparelDetaModel.apparelImage)
+        cell.apparelImage?.layer.cornerRadius = 40
+        cell.apparelImage?.clipsToBounds = true
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.backgroundColor = UIColor(named: "FormalCellColor")
         cell.tableViewCellDelegate = self
@@ -91,6 +93,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     func like(apparelData: ApparelDataModel) {
         
         let setApparelData = ApparelDataModel()
+        setApparelData.id = apparelData.id
         setApparelData.apparelText = apparelData.apparelText
         setApparelData.apparelImage = apparelData.apparelImage
         

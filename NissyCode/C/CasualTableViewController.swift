@@ -11,6 +11,7 @@ import RealmSwift
 import SwiftMessages
 
 
+
 class CasualTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TableViewCellDelegate{
     
     @IBOutlet weak var CasualTableView: UITableView!
@@ -38,6 +39,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         CasualTableView.rowHeight = UITableView.automaticDimension
         
         CasualTableView.reloadData()
+        
         
         let Fassions = fassions
         self.fassions = Fassions
@@ -85,13 +87,11 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         fassions.append(ApparelDataModel(id: "19", apparelText: "ビッグシルエットシャツ（ホワイト）", apparelImage: "19", starButton: false, onePointText: "Nissy感を出すならシンプルな無地のものを合わせるといいかもです✨", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579530"))
         
-        fassions.append(ApparelDataModel(id: "20", apparelText: "シャツ（カーキ）", apparelImage: "20", starButton: false, onePointText: "シャツが無地なのでチェックパンツを合わせてもいいかも", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579532"))
+        fassions.append(ApparelDataModel(id: "20", apparelText: "シャツ（カーキ）", apparelImage: "20", starButton: false, onePointText: "シャツが無地なのでチェックパンツなどを合わせてもいいかも", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579532"))
         
-        fassions.append(ApparelDataModel(id: "21", apparelText: "5分丈パーカー（ブラック）", apparelImage: "21", starButton: false, onePointText: "ビッグサイズがNissy感が出ますね✨", link: "https://wear.jp/tosanai/16727156/"))
+        fassions.append(ApparelDataModel(id: "21", apparelText: "5分丈パーカー（ブラック）", apparelImage: "21", starButton: false, onePointText: "自分の好きなパンツに合わせましょう✨", link: "https://wear.jp/tosanai/16727156/"))
         
-        fassions.append(ApparelDataModel(id: "22", apparelText: "5分丈パーカー（ホワイト）", apparelImage: "22", starButton: false, onePointText: "白×黒などモノトーンが無難かも", link: "https://zozo.jp/shop/minority/goods-sale/32363832/?did=56394840"))
-        
-       
+        fassions.append(ApparelDataModel(id: "22", apparelText: "5分丈パーカー（ホワイト）", apparelImage: "22", starButton: false, onePointText: "シンプルなモノトーンなコーデもありかも", link: "https://zozo.jp/shop/minority/goods-sale/32363832/?did=56394840"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,6 +104,8 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.apparel = apparelDetaModel
         cell.apparelText.text = apparelDetaModel.apparelText
         cell.apparelImage.image = UIImage(named: apparelDetaModel.apparelImage)
+        cell.apparelImage?.layer.cornerRadius = 40
+        cell.apparelImage?.clipsToBounds = true
         cell.onepointText.text = apparelDetaModel.onePointText
         cell.backgroundColor = UIColor(named: "CasualCellColor")
         cell.tableViewCellDelegate = self
@@ -115,6 +117,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
     func like(apparelData: ApparelDataModel) {
         
         let setApparelData = ApparelDataModel()
+        setApparelData.id = apparelData.id
         setApparelData.apparelText = apparelData.apparelText
         setApparelData.apparelImage = apparelData.apparelImage
         

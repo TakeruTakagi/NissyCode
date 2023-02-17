@@ -66,11 +66,21 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         
         cell.favoriteName.text = apparelDatamodel.apparelText
         cell.favoriteImage.image = UIImage(named: apparelDatamodel.apparelImage)
+        cell.favoriteImage?.layer.cornerRadius = 40
+        cell.favoriteImage?.clipsToBounds = true
         cell.backgroundColor = UIColor(named: "FavoriteColor")
         cell.deleteDelegate = self
         
         return cell
     }
+    
+    
+    //    スワイプでセルを削除する
+    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
+    //        favoriteItem.remove(at: indexPath.row)
+    //        let indexPath = [indexPath]
+    //        tableView.deleteRows(at: indexPath, with: .automatic)
+    //    }
     
     
     func offlike(apparel: ApparelDataModel, index: Int) {
@@ -80,6 +90,7 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
             let item = favoriteItem[index]
             realm.delete(item)
         }
+        
         setData()
         favoriteTableView.reloadData()
         
@@ -88,9 +99,9 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
         view.configureContent(body: "お気に入りから削除されました")
         view.configureDropShadow()
         view.layoutMarginAdditions = UIEdgeInsets(top: 20,
-                              left: 20,
-                              bottom: 20,
-                              right: 20)
+                                                  left: 20,
+                                                  bottom: 20,
+                                                  right: 20)
         view.configureTheme(.success)
         view.titleLabel?.isHidden = true
         view.iconLabel?.isHidden = true
