@@ -75,7 +75,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJX-Bf-noZ">
-                                <rect key="frame" x="-1" y="59" width="393" height="44"/>
+                                <rect key="frame" x="-3" y="59" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="CasualCellColor"/>
                                 <items>
@@ -92,8 +92,8 @@
                             <constraint firstItem="bi1-J7-EQL" firstAttribute="trailing" secondItem="fkk-rV-97H" secondAttribute="trailing" id="r6p-W4-4kW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="カジュアル" image="person.3.fill" catalog="system" id="npd-dE-2xz" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <color key="badgeColor" name="CasualCellColor"/>
+                    <tabBarItem key="tabBarItem" title="カジュアル" image="person.3.fill" catalog="system" id="VW4-9b-HOp" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <color key="badgeColor" name="AccentColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                 <color key="value" systemColor="opaqueSeparatorColor"/>
@@ -103,15 +103,16 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="animation" destination="bZX-LU-fir" id="mhH-Gb-IML"/>
+                            <outlet property="animation" destination="bZX-LU-fir" id="9kf-0B-vIG"/>
                         </connections>
                     </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CasualTableView" destination="fkk-rV-97H" id="1xq-Fo-fOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfv-g6-UEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <customObject id="bZX-LU-fir" customClass="RAMFlipTopTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="bZX-LU-fir" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="2759.5419847328244" y="748.59154929577471"/>
         </scene>
@@ -128,7 +129,7 @@
                                 <color key="backgroundColor" red="0.71798204941092636" green="1" blue="0.972064327923296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAb-Nb-myE">
-                                <rect key="frame" x="-1" y="59" width="394" height="44"/>
+                                <rect key="frame" x="-2" y="59" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="FormalCellColor"/>
                                 <items>
@@ -192,6 +193,9 @@
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="107"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="CasualCellColor">
             <color red="0.81599998474121094" green="1" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
