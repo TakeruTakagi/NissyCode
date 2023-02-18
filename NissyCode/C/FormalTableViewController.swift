@@ -76,7 +76,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FormalTableViewCell  //.xibカスタムセル使用時
-        let apparelDetaModel :ApparelDataModel = formalFassions[formalFassions.count - indexPath.row - 1]
+        let apparelDetaModel :ApparelDataModel = formalFassions[indexPath.row]
         cell.apparel = apparelDetaModel
         cell.apparelText.text = apparelDetaModel.apparelText
         cell.apparelImage?.image = UIImage(named: apparelDetaModel.apparelImage)

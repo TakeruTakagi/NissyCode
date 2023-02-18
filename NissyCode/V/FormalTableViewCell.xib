@@ -34,8 +34,9 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LM9-fz-dku">
                         <rect key="frame" x="4" y="63" width="340" height="380"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="380" id="2aU-wG-SH4"/>
+                            <constraint firstAttribute="width" constant="340" id="BqX-bu-WZB"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="380" id="S57-QA-m99"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="UZB-7W-mPq"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-Gw-Onk">

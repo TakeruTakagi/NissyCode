@@ -62,13 +62,15 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
     //どんなセルを表示するか
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = favoriteTableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! FavoriteTableViewCell
-        let apparelDatamodel: ApparelDataModel = favoriteItem[favoriteItem.count - indexPath.row - 1]
+        let apparelDatamodel: ApparelDataModel = favoriteItem[indexPath.row]
         
+        cell.index = indexPath.row
         cell.favoriteName.text = apparelDatamodel.apparelText
         cell.favoriteImage.image = UIImage(named: apparelDatamodel.apparelImage)
         cell.favoriteImage?.layer.cornerRadius = 40
         cell.favoriteImage?.clipsToBounds = true
         cell.backgroundColor = UIColor(named: "FavoriteColor")
+        
         cell.deleteDelegate = self
         
         return cell

@@ -100,7 +100,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CasualTableViewCell  //.xibカスタムセル使用時
-        let apparelDetaModel :ApparelDataModel = fassions[fassions.count - indexPath.row - 1]
+        let apparelDetaModel :ApparelDataModel = fassions[indexPath.row]
         cell.apparel = apparelDetaModel
         cell.apparelText.text = apparelDetaModel.apparelText
         cell.apparelImage.image = UIImage(named: apparelDetaModel.apparelImage)
