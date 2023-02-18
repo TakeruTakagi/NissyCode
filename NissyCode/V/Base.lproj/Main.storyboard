@@ -36,7 +36,10 @@
                         <constraints>
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="leading" secondItem="q7v-iP-mvI" secondAttribute="leading" id="3Po-ph-ChW"/>
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="top" secondItem="q7v-iP-mvI" secondAttribute="top" id="AEh-r8-8oD"/>
+                            <constraint firstItem="oQf-VO-N1l" firstAttribute="top" secondItem="q7v-iP-mvI" secondAttribute="top" id="CBX-B1-3VB"/>
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="trailing" secondItem="q7v-iP-mvI" secondAttribute="trailing" id="JAG-sq-dI8"/>
+                            <constraint firstItem="oQf-VO-N1l" firstAttribute="trailing" secondItem="q7v-iP-mvI" secondAttribute="trailing" id="S0d-Vu-Rco"/>
+                            <constraint firstItem="oQf-VO-N1l" firstAttribute="leading" secondItem="q7v-iP-mvI" secondAttribute="leading" id="gK9-3h-O7E"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="お気に入り" image="star.fill" catalog="system" id="Uo5-c1-FjR" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -74,9 +77,8 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJX-Bf-noZ">
-                                <rect key="frame" x="-3" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJX-Bf-noZ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <color key="barTintColor" name="CasualCellColor"/>
                                 <items>
                                     <navigationItem title="Casual" id="3Fj-eB-92a"/>
@@ -87,8 +89,11 @@
                         <color key="backgroundColor" name="CasualCellColor"/>
                         <constraints>
                             <constraint firstItem="fkk-rV-97H" firstAttribute="leading" secondItem="bi1-J7-EQL" secondAttribute="leading" id="26l-oR-YIS"/>
+                            <constraint firstItem="zJX-Bf-noZ" firstAttribute="leading" secondItem="bi1-J7-EQL" secondAttribute="leading" id="5Sn-bf-XDx"/>
+                            <constraint firstItem="zJX-Bf-noZ" firstAttribute="top" secondItem="bi1-J7-EQL" secondAttribute="top" id="AIP-Dr-eCs"/>
                             <constraint firstItem="bi1-J7-EQL" firstAttribute="bottom" secondItem="fkk-rV-97H" secondAttribute="bottom" id="Bi3-8z-tZ2"/>
                             <constraint firstItem="fkk-rV-97H" firstAttribute="top" secondItem="bi1-J7-EQL" secondAttribute="top" constant="44" id="bMd-RP-rij"/>
+                            <constraint firstItem="zJX-Bf-noZ" firstAttribute="trailing" secondItem="bi1-J7-EQL" secondAttribute="trailing" id="ghC-OM-DgA"/>
                             <constraint firstItem="bi1-J7-EQL" firstAttribute="trailing" secondItem="fkk-rV-97H" secondAttribute="trailing" id="r6p-W4-4kW"/>
                         </constraints>
                     </view>
@@ -114,7 +119,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfv-g6-UEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="bZX-LU-fir" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="2759.5419847328244" y="748.59154929577471"/>
+            <point key="canvasLocation" x="2372" y="749"/>
         </scene>
         <!--フォーマル・デート-->
         <scene sceneID="Lvz-98-oIa">
@@ -128,9 +133,8 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" red="0.71798204941092636" green="1" blue="0.972064327923296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAb-Nb-myE">
-                                <rect key="frame" x="-2" y="59" width="394" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAb-Nb-myE">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <color key="barTintColor" name="FormalCellColor"/>
                                 <items>
                                     <navigationItem title="Formal" id="HhW-is-wJ5"/>
@@ -142,8 +146,11 @@
                         <constraints>
                             <constraint firstItem="lA0-Dk-1dS" firstAttribute="top" secondItem="der-FD-ycJ" secondAttribute="top" constant="44" id="AZ8-aE-bSQ"/>
                             <constraint firstItem="der-FD-ycJ" firstAttribute="trailing" secondItem="lA0-Dk-1dS" secondAttribute="trailing" id="ElV-e9-1HN"/>
+                            <constraint firstItem="fAb-Nb-myE" firstAttribute="trailing" secondItem="der-FD-ycJ" secondAttribute="trailing" id="Sci-ym-ytv"/>
                             <constraint firstItem="der-FD-ycJ" firstAttribute="bottom" secondItem="lA0-Dk-1dS" secondAttribute="bottom" id="Sle-Yp-1lY"/>
+                            <constraint firstItem="fAb-Nb-myE" firstAttribute="leading" secondItem="oxi-kl-07m" secondAttribute="leading" id="fMx-y2-ZMx"/>
                             <constraint firstItem="lA0-Dk-1dS" firstAttribute="leading" secondItem="der-FD-ycJ" secondAttribute="leading" id="u5j-bi-Qtz"/>
+                            <constraint firstItem="fAb-Nb-myE" firstAttribute="top" secondItem="der-FD-ycJ" secondAttribute="top" id="yOX-UQ-2pR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="フォーマル・デート" image="suit.heart.fill" catalog="system" id="uqL-bc-dgU" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -167,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzt-EC-sz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="Rey-a7-heK" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="749"/>
+            <point key="canvasLocation" x="1657" y="749"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="H3Y-Eg-dAE">

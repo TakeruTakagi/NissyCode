@@ -31,6 +31,7 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         // 境界線の透過
         UITabBar.appearance().shadowImage = UIImage()
         
+        loadData()
         FormalTableView.delegate = self
         FormalTableView.dataSource = self
         FormalTableView.register(UINib(nibName: "FormalTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
@@ -41,8 +42,6 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         let formalFassions = formalFassions
         self.formalFassions = formalFassions
-        
-        loadData()
     }
     
     
