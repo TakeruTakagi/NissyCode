@@ -77,14 +77,6 @@ class FavoriteTableView: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     
-    //    スワイプでセルを削除する
-    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)  {
-    //        favoriteItem.remove(at: indexPath.row)
-    //        let indexPath = [indexPath]
-    //        tableView.deleteRows(at: indexPath, with: .automatic)
-    //    }
-    
-    
     func offlike(apparel: ApparelDataModel, index: Int) {
         FVC.deleteDelegate = self
         let realm = try! Realm()

@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-cL-rQn">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-cL-rQn">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="FavoriteColor"/>
                                 <color key="sectionIndexBackgroundColor" name="FavoriteColor"/>
                             </tableView>
@@ -39,7 +38,11 @@
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="top" secondItem="q7v-iP-mvI" secondAttribute="top" id="CBX-B1-3VB"/>
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="trailing" secondItem="q7v-iP-mvI" secondAttribute="trailing" id="JAG-sq-dI8"/>
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="trailing" secondItem="q7v-iP-mvI" secondAttribute="trailing" id="S0d-Vu-Rco"/>
+                            <constraint firstItem="uP1-cL-rQn" firstAttribute="top" secondItem="oQf-VO-N1l" secondAttribute="bottom" id="Yj8-Jp-xo3"/>
                             <constraint firstItem="oQf-VO-N1l" firstAttribute="leading" secondItem="q7v-iP-mvI" secondAttribute="leading" id="gK9-3h-O7E"/>
+                            <constraint firstItem="uP1-cL-rQn" firstAttribute="bottom" secondItem="q7v-iP-mvI" secondAttribute="bottom" id="oek-ry-g6Z"/>
+                            <constraint firstItem="uP1-cL-rQn" firstAttribute="trailing" secondItem="q7v-iP-mvI" secondAttribute="trailing" id="sg8-rc-BhL"/>
+                            <constraint firstItem="uP1-cL-rQn" firstAttribute="leading" secondItem="q7v-iP-mvI" secondAttribute="leading" id="uFz-a5-AEn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="お気に入り" image="star.fill" catalog="system" id="Uo5-c1-FjR" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -88,13 +91,17 @@
                         <viewLayoutGuide key="safeArea" id="bi1-J7-EQL"/>
                         <color key="backgroundColor" name="CasualCellColor"/>
                         <constraints>
+                            <constraint firstItem="fkk-rV-97H" firstAttribute="leading" secondItem="bi1-J7-EQL" secondAttribute="leading" id="1fq-zQ-wtz"/>
                             <constraint firstItem="fkk-rV-97H" firstAttribute="leading" secondItem="bi1-J7-EQL" secondAttribute="leading" id="26l-oR-YIS"/>
                             <constraint firstItem="zJX-Bf-noZ" firstAttribute="leading" secondItem="bi1-J7-EQL" secondAttribute="leading" id="5Sn-bf-XDx"/>
                             <constraint firstItem="zJX-Bf-noZ" firstAttribute="top" secondItem="bi1-J7-EQL" secondAttribute="top" id="AIP-Dr-eCs"/>
                             <constraint firstItem="bi1-J7-EQL" firstAttribute="bottom" secondItem="fkk-rV-97H" secondAttribute="bottom" id="Bi3-8z-tZ2"/>
+                            <constraint firstItem="fkk-rV-97H" firstAttribute="top" secondItem="zJX-Bf-noZ" secondAttribute="bottom" id="I8L-aF-07k"/>
+                            <constraint firstItem="fkk-rV-97H" firstAttribute="bottom" secondItem="bi1-J7-EQL" secondAttribute="bottom" id="M6J-Su-bdE"/>
                             <constraint firstItem="fkk-rV-97H" firstAttribute="top" secondItem="bi1-J7-EQL" secondAttribute="top" constant="44" id="bMd-RP-rij"/>
                             <constraint firstItem="zJX-Bf-noZ" firstAttribute="trailing" secondItem="bi1-J7-EQL" secondAttribute="trailing" id="ghC-OM-DgA"/>
                             <constraint firstItem="bi1-J7-EQL" firstAttribute="trailing" secondItem="fkk-rV-97H" secondAttribute="trailing" id="r6p-W4-4kW"/>
+                            <constraint firstItem="fkk-rV-97H" firstAttribute="trailing" secondItem="bi1-J7-EQL" secondAttribute="trailing" id="yqB-4t-e7O"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="カジュアル" image="person.3.fill" catalog="system" id="VW4-9b-HOp" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
@@ -144,10 +151,14 @@
                         <viewLayoutGuide key="safeArea" id="der-FD-ycJ"/>
                         <color key="backgroundColor" name="FormalCellColor"/>
                         <constraints>
+                            <constraint firstItem="lA0-Dk-1dS" firstAttribute="bottom" secondItem="der-FD-ycJ" secondAttribute="bottom" id="3zX-rl-pAB"/>
+                            <constraint firstItem="lA0-Dk-1dS" firstAttribute="leading" secondItem="der-FD-ycJ" secondAttribute="leading" id="9Fr-ti-hPt"/>
                             <constraint firstItem="lA0-Dk-1dS" firstAttribute="top" secondItem="der-FD-ycJ" secondAttribute="top" constant="44" id="AZ8-aE-bSQ"/>
+                            <constraint firstItem="lA0-Dk-1dS" firstAttribute="top" secondItem="fAb-Nb-myE" secondAttribute="bottom" id="AmX-gD-a43"/>
                             <constraint firstItem="der-FD-ycJ" firstAttribute="trailing" secondItem="lA0-Dk-1dS" secondAttribute="trailing" id="ElV-e9-1HN"/>
                             <constraint firstItem="fAb-Nb-myE" firstAttribute="trailing" secondItem="der-FD-ycJ" secondAttribute="trailing" id="Sci-ym-ytv"/>
                             <constraint firstItem="der-FD-ycJ" firstAttribute="bottom" secondItem="lA0-Dk-1dS" secondAttribute="bottom" id="Sle-Yp-1lY"/>
+                            <constraint firstItem="lA0-Dk-1dS" firstAttribute="trailing" secondItem="der-FD-ycJ" secondAttribute="trailing" id="YuJ-bz-qRF"/>
                             <constraint firstItem="fAb-Nb-myE" firstAttribute="leading" secondItem="oxi-kl-07m" secondAttribute="leading" id="fMx-y2-ZMx"/>
                             <constraint firstItem="lA0-Dk-1dS" firstAttribute="leading" secondItem="der-FD-ycJ" secondAttribute="leading" id="u5j-bi-Qtz"/>
                             <constraint firstItem="fAb-Nb-myE" firstAttribute="top" secondItem="der-FD-ycJ" secondAttribute="top" id="yOX-UQ-2pR"/>
