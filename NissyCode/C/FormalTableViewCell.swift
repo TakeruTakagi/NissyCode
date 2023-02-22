@@ -51,12 +51,11 @@ class FormalTableViewCell: UITableViewCell {
         
         //ボタン → 画像との差し替え
         if apparel.starButton == true {
-            starButton.tintColor = .clear
             starButton.setImage(lip, for: state)
         }else {
-            starButton.tintColor = .lightGray
             starButton.setImage(star, for: .normal)
         }
+        
         if apparel.starButton == true {
             tableViewCellDelegate?.like(apparelData: apparel)
         }

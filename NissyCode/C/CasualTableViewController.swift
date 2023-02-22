@@ -117,7 +117,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
     func like(apparelData: ApparelDataModel) {
         
         let setApparelData = ApparelDataModel()
-        setApparelData.id = apparelData.id
+        
         setApparelData.apparelText = apparelData.apparelText
         setApparelData.apparelImage = apparelData.apparelImage
         

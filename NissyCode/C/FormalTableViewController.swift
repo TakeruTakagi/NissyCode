@@ -88,11 +88,13 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+    
+    
     //Realmの保存処理　デリゲートメソッド
     func like(apparelData: ApparelDataModel) {
         
         let setApparelData = ApparelDataModel()
-        setApparelData.id = apparelData.id
+        
         setApparelData.apparelText = apparelData.apparelText
         setApparelData.apparelImage = apparelData.apparelImage
         
@@ -128,6 +130,4 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         guard let url = URL(string: index) else { return }
         UIApplication.shared.open(url)
     }
-    
-    
 }
