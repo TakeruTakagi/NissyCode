@@ -51,7 +51,7 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
     func loadData() {
         fassions.append(ApparelDataModel(id: "1", apparelText: "ブルゾン", apparelImage: "1", starButton: false, onePointText: "とにかく合わせやすい。\nNissyもプライベートで着ていたこともあり、個人的に好きなアイテムです😊", link: "https://zozo.jp/shop/rockymonroe/goods/66947141/?did=110200999&rid=1203"))
         
-        fassions.append(ApparelDataModel(id: "2", apparelText: "ボアジャケット（ブラック）", apparelImage: "2", starButton: false, onePointText: "インナーが裾から見えるものを選ぶと、差し色になっていいかもです✨", link: "https://zozo.jp/shop/astronomy/goods-sale/60380107/?did=100301252&rid=1203"))
+        fassions.append(ApparelDataModel(id: "2", apparelText: "ボアジャケット（ブラック）", apparelImage: "2", starButton: false, onePointText: "インナーが裾から見えるものを選んでも、アクセントになっていいかもです✨", link: "https://zozo.jp/shop/astronomy/goods-sale/60380107/?did=100301252&rid=1203"))
         
         fassions.append(ApparelDataModel(id: "3", apparelText: "スウェット（レッド）", apparelImage: "3", starButton: false, onePointText: "The Eternal Live のNissy気分を♫", link: "https://zozo.jp/shop/nike/goods/68822087/?did=113460813"))
         
@@ -83,15 +83,15 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         fassions.append(ApparelDataModel(id: "17", apparelText: "ビッグシルエットシャツ（ブルー）", apparelImage: "17", starButton: false, onePointText: "夏らしい涼しげな爽やかさを演出しましょう🌈", link: "https://zozo.jp/shop/startingover/goods-sale/64819405/?did=107044850"))
         
-        fassions.append(ApparelDataModel(id: "18", apparelText: "ビッグシルエットシャツ（ブラック）", apparelImage: "18", starButton: false, onePointText: "どんな色にも対応できますね。クールな印象を与えます😊", link: "https://zozo.jp/shop/suburb/goods-sale/64424746/?did=106414636"))
+        fassions.append(ApparelDataModel(id: "18", apparelText: "ビッグシルエットシャツ（ブラック）", apparelImage: "18", starButton: false, onePointText: "どんな色にも対応できますね。デニム、白パンツにも合います😊", link: "https://zozo.jp/shop/suburb/goods-sale/64424746/?did=106414636"))
         
-        fassions.append(ApparelDataModel(id: "19", apparelText: "ビッグシルエットシャツ（ホワイト）", apparelImage: "19", starButton: false, onePointText: "Nissy感を出すならシンプルな無地のものを合わせるといいかもです✨", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579530"))
+        fassions.append(ApparelDataModel(id: "19", apparelText: "ビッグシルエットシャツ（ホワイト）", apparelImage: "19", starButton: false, onePointText: "シンプルな無地のものを合わせるといいかもです✨", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579530"))
         
-        fassions.append(ApparelDataModel(id: "20", apparelText: "シャツ（カーキ）", apparelImage: "20", starButton: false, onePointText: "シャツが無地なのでチェックパンツなどを合わせてもいいかも", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579532"))
+        fassions.append(ApparelDataModel(id: "20", apparelText: "シャツ（カーキ）", apparelImage: "20", starButton: false, onePointText: "シャツが無地なのでチェックパンツなどを合わせてもいいかも♩", link: "https://zozo.jp/shop/minority/goods/41638391/?did=69579532"))
         
         fassions.append(ApparelDataModel(id: "21", apparelText: "5分丈パーカー（ブラック）", apparelImage: "21", starButton: false, onePointText: "自分の好きなパンツに合わせましょう✨", link: "https://wear.jp/tosanai/16727156/"))
         
-        fassions.append(ApparelDataModel(id: "22", apparelText: "5分丈パーカー（ホワイト）", apparelImage: "22", starButton: false, onePointText: "シンプルなモノトーンなコーデもありかも", link: "https://zozo.jp/shop/minority/goods-sale/32363832/?did=56394840"))
+        fassions.append(ApparelDataModel(id: "22", apparelText: "5分丈パーカー（ホワイト）", apparelImage: "22", starButton: false, onePointText: "シンプルなモノトーンなコーデもありですね😊", link: "https://zozo.jp/shop/minority/goods-sale/32363832/?did=56394840"))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,6 +111,10 @@ class CasualTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.tableViewCellDelegate = self
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("行番号\(indexPath.row)")
     }
     
     //Realmの保存処理を

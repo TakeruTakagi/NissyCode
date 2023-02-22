@@ -45,10 +45,11 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
+    
     func loadData() {
-        formalFassions.append(ApparelDataModel(id: "23", apparelText: "シャツ（ブラウン）", apparelImage: "23", starButton: false, onePointText: "愛tearsっぽい。靴はプレーントゥシューズなどを合わせるとよりキマりますね✨", link: "https://zozo.jp/shop/sitry/goods/59175841/?did=98090523"))
+        formalFassions.append(ApparelDataModel(id: "23", apparelText: "シャツ（ブラウン）", apparelImage: "23", starButton: false, onePointText: "愛tearsっぽく。プレーントゥシューズなどを合わせるとよりキマりますね✨", link: "https://zozo.jp/shop/sitry/goods/59175841/?did=98090523"))
         
-        formalFassions.append(ApparelDataModel(id: "24", apparelText: "ロンT（ブラック）", apparelImage: "24", starButton: false, onePointText: "デニム、モノトーンでのコーデもNissyによく見られます👀", link: "https://zozo.jp/shop/billabong/goods/70107862/?did=115107779"))
+        formalFassions.append(ApparelDataModel(id: "24", apparelText: "ロンT（ブラック）", apparelImage: "24", starButton: false, onePointText: "デニム、モノトーンでのコーデも\nNissyによく見られます👀", link: "https://zozo.jp/shop/billabong/goods/70107862/?did=115107779"))
         
         formalFassions.append(ApparelDataModel(id: "33", apparelText: "ロンT（ベージュ）", apparelImage: "33", starButton: false, onePointText: "どんな色にもあいますが、黒などに合わせても落ち着いた雰囲気が出ますね😊", link: "https://store.shopping.yahoo.co.jp/lux-style/aa-0989.html#"))
         
@@ -56,13 +57,13 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         formalFassions.append(ApparelDataModel(id: "26", apparelText: "ニット（黒）", apparelImage: "26", starButton: false, onePointText: "黒、キャメルなど暗めの色のパンツを合わせるのもおすすめ✨", link: "https://zozo.jp/shop/studious/goods-sale/66982020/?did=110260341"))
         
-        formalFassions.append(ApparelDataModel(id: "27", apparelText: "ニット（白）", apparelImage: "27", starButton: false, onePointText: "少し大きめのサイズを選んでゆるっとした印象を♫\nNissy感もUP♪", link: "https://zozo.jp/shop/jiggysshop/goods/67929966/?did=111839378"))
+        formalFassions.append(ApparelDataModel(id: "27", apparelText: "ニット（白）", apparelImage: "27", starButton: false, onePointText: "少し大きめのサイズを選んで\nゆるっとした印象を♫Nissy感もUP♪", link: "https://zozo.jp/shop/jiggysshop/goods/67929966/?did=111839378"))
         
-        formalFassions.append(ApparelDataModel(id: "28", apparelText: "テーラードジャケット", apparelImage: "28", starButton: false, onePointText: "インナーはTシャツやニットもいいかも✨\n重ね着目的ならジャケットはサイズに注意🫢", link: "https://zozo.jp/shop/nanouniverse/goods-sale/68030258/?did=111993705&rid=1203"))
+        formalFassions.append(ApparelDataModel(id: "28", apparelText: "テーラードジャケット", apparelImage: "28", starButton: false, onePointText: "インナーはTシャツやニットも◎\n重ね着目的ならサイズには注意🫢", link: "https://zozo.jp/shop/nanouniverse/goods-sale/68030258/?did=111993705&rid=1203"))
         
         formalFassions.append(ApparelDataModel(id: "29", apparelText: "チェスターコート（キャメル）", apparelImage: "29", starButton: false, onePointText: "Nissyコーデをするならチェスターコーデは外せませんね😊", link: "https://zozo.jp/shop/astronomy/goods-sale/60887084/?did=112282312&rid=1203"))
         
-        formalFassions.append(ApparelDataModel(id: "30", apparelText: "ロングコート（ブラック）", apparelImage: "30", starButton: false, onePointText: "モノトーンを意識してAddicted気分を✨", link: "https://zozo.jp/shop/nordsud/goods-sale/53066228/?did=88145120&rid=1203"))
+        formalFassions.append(ApparelDataModel(id: "30", apparelText: "ロングコート（ブラック）", apparelImage: "30", starButton: false, onePointText: "モノトーンを意識してAddicted感を✨", link: "https://zozo.jp/shop/nordsud/goods-sale/53066228/?did=88145120&rid=1203"))
         
         formalFassions.append(ApparelDataModel(id: "31", apparelText: "ウールフラシブルゾン", apparelImage: "31", starButton: false, onePointText: "ゆるふわな印象を与えます♩\nゆったりめのパンツもおすすめ😊", link: "https://zozo.jp/shop/hare/goods-sale/68949477/?did=113391097&utm_source=google&utm_medium=cpc&utm_campaign=200701_nuu&utm_term=004_&utm_content=ad_nuu_10&gclid=Cj0KCQiA54KfBhCKARIsAJzSrdqGkbU8L3oD8egJCXZY_iawrbyliP7pWehfA0PSUsWJSvY3PmvucQ4aAswcEALw_wcB"))
         
@@ -86,6 +87,10 @@ class FormalTableViewController: UIViewController, UITableViewDelegate, UITableV
         cell.tableViewCellDelegate = self
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("行番号\(indexPath.row)")
     }
     
     

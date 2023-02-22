@@ -38,6 +38,11 @@ class CasualTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        starButton.setImage(star, for: .normal)
+    }
    
     //お気に入り機能
     @IBAction func Like(_ sender: Any) {
